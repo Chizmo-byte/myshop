@@ -124,51 +124,58 @@
        ヘッダー
        ========================================= */
     .site-header {
-      background-color: var(--bg-white);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-      gap: 10px;
-    }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 6px 0;
+  gap: 6px;
+}
 
-    .brand-logo {
-      display: flex;
-      flex-direction: column;
-    }
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
 
-    .brand-sub {
-      font-size: 0.68rem;
-      color: var(--primary-green);
-      font-weight: 700;
-      line-height: 1.2;
-    }
+.brand-sub {
+  font-size: 0.62rem;
+  color: var(--primary-green);
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-    .brand-name {
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--text-main);
-      letter-spacing: -0.02em;
-    }
+.brand-name {
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  white-space: nowrap;
+}
 
-    .header-cta {
-      flex-shrink: 0;
-      background-color: var(--accent-orange);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 8px 14px;
-      border-radius: 50px;
-      box-shadow: 0 2px 6px rgba(245, 124, 0, 0.28);
-      transition: background-color 0.2s;
-    }
+.header-cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+  background-color: var(--accent-orange);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 7px 11px;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(245, 124, 0, 0.28);
+}
 
     .header-cta:hover {
       background-color: var(--accent-orange-hover);
