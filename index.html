@@ -1,254 +1,846 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="rho9ZuYvhUNs5tkPMNWwIAT4YTGsJF6OFr8W7ThPsDk" />
-  <title>暮らしと家族の便利アイテム＆サービス案内所</title>
-  <meta name="description" content="日々の暮らしや家族の節目に役立つアイテム・サービスを厳選し、選び方のポイントや申し込み・購入前の確認事項を分かりやすくまとめています。">
-  <meta property="og:title" content="暮らしと家族の便利アイテム＆サービス案内所">
-  <meta property="og:description" content="日々の暮らしや家族の節目に役立つアイテム・サービスを厳選し、選び方のポイントや確認事項を分かりやすくご案内します。">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ja_JP">
+  <title>暮らしと家族の便利アイテム＆サービス案内所｜失敗しない選び方・事前確認ガイド</title>
+  <meta name="description" content="子育て家庭のギフト選び・習い事・暮らしの便利サービスを中立的な視点で整理する比較・案内ポータル。申し込む前に知っておきたい注意点、料金の仕組み、向いているご家庭の特徴を分かりやすく解説します。" />
+  <link rel="canonical" href="https://myshop-9nl.pages.dev/" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="暮らしと家族の便利アイテム＆サービス案内所" />
+  <meta property="og:title" content="暮らしと家族の便利アイテム＆サービス案内所｜失敗しない選び方ガイド" />
+  <meta property="og:description" content="子育て家庭のギフト選び・習い事・暮らしの便利サービスを中立的な視点で整理。申し込み前の確認ポイントを分かりやすく案内します。" />
+  <meta property="og:url" content="https://myshop-9nl.pages.dev/" />
+
+  <!-- 構造化データ（WebSite & ItemList） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://myshop-9nl.pages.dev/#website",
+        "url": "https://myshop-9nl.pages.dev/",
+        "name": "暮らしと家族の便利アイテム＆サービス案内所",
+        "description": "子育て家庭のギフト選び・習い事・暮らしの便利サービスを中立的な視点で整理する比較・事前確認ガイド",
+        "inLanguage": "ja"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://myshop-9nl.pages.dev/#itemlist",
+        "name": "公開中の選び方・事前確認ガイド一覧",
+        "itemListOrder": "https://schema.org/ItemListOrderDescending",
+        "numberOfItems": 2,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ウッディプッディのおままごとギフト選び｜年齢別の失敗しない選び方と注意点",
+            "url": "https://myshop-9nl.pages.dev/toys/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "体育スポーツ家庭教師ファーストの体験案内｜料金・対象エリア・申し込み前の確認点",
+            "url": "https://myshop-9nl.pages.dev/sports/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
-      --primary: #22a06b;
-      --primary-dark: #187d52;
-      --primary-light: #eaf8f1;
-      --accent: #f97316;
-      --accent-light: #fff7ed;
-      --text-main: #2d3748;
-      --text-muted: #546273;
-      --bg-page: #f8fafc;
-      --bg-white: #ffffff;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --text: #1e293b;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --primary-soft: #eff6ff;
+      --accent: #0f766e;
+      --accent-soft: #f0fdfa;
       --border: #e2e8f0;
-      --radius: 16px;
-      --shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+      --radius: 14px;
+      --max-w: 1040px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
-      font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-      color: var(--text-main);
-      background-color: var(--bg-page);
-      line-height: 1.75;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
     }
-    .pr-bar {
-      background: #f1f5f9;
-      color: var(--text-muted);
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* PR表記バー（ステマ規制・ASP審査対応） */
+    .pr-banner {
+      background-color: #f1f5f9;
+      border-bottom: 1px solid var(--border);
+      padding: 6px 16px;
       font-size: 12px;
-      text-align: center;
-      padding: 6px 12px;
-      border-bottom: 1px solid var(--border);
-    }
-    header {
-      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 40px 20px 44px;
-      text-align: center;
-    }
-    .container {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
-    .site-badge {
-      display: inline-block;
-      background: var(--primary-light);
-      color: var(--primary-dark);
-      font-size: 13px;
-      font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 999px;
-      margin-bottom: 14px;
-    }
-    h1 {
-      font-size: clamp(1.4rem, 3.8vw, 2rem);
-      line-height: 1.4;
-      color: #1e293b;
-      margin-bottom: 14px;
-    }
-    .lead {
-      max-width: 660px;
-      margin: 0 auto;
       color: var(--text-muted);
-      font-size: 15px;
+      text-align: center;
+      line-height: 1.5;
     }
-    main {
-      padding: 36px 0 56px;
+
+    /* ヘッダー */
+    .site-header {
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
+
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .site-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: clamp(14px, 3.6vw, 17px);
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .header-nav a:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 520px) {
+      .header-nav {
+        display: none;
+      }
+    }
+
+    /* ヒーローセクション */
+    .hero {
+      background: linear-gradient(180deg, #eff6ff 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: clamp(28px, 6vw, 48px) 16px clamp(24px, 5vw, 40px);
+    }
+
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid #bfdbfe;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(21px, 5.2vw, 31px);
+      line-height: 1.38;
+      letter-spacing: -0.01em;
+      color: #0f172a;
+    }
+
+    .hero-lead {
+      margin: 0 0 20px;
+      font-size: clamp(14px, 3.8vw, 16px);
+      color: var(--text-muted);
+      max-width: 740px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 720px) {
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-point {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 13px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-point strong {
+      display: block;
+      font-size: 13.5px;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .hero-point span {
+      color: var(--text-muted);
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    /* メインコンテナ */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 28px 16px 56px;
+    }
+
+    .section-header {
+      margin-bottom: 16px;
+    }
+
     .section-title {
-      font-size: 1.25rem;
-      color: #1e293b;
-      margin-bottom: 20px;
-      padding-left: 12px;
-      border-left: 4px solid var(--primary);
+      margin: 0 0 4px;
+      font-size: clamp(18px, 4.5vw, 22px);
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
+
+    .section-desc {
+      margin: 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* カテゴリフィルターUI */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .filter-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .filter-btn[aria-pressed="true"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .article-count {
+      margin-left: auto;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    @media (max-width: 480px) {
+      .article-count {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2px;
+      }
+    }
+
+    /* 記事一覧グリッド */
     .article-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
       margin-bottom: 44px;
     }
-    .card {
-      background: var(--bg-white);
+
+    @media (max-width: 760px) {
+      .article-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .article-card {
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
     }
-    .card:hover {
+
+    .article-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      box-shadow: var(--shadow-md);
+      border-color: #93c5fd;
     }
-    .card-tag {
+
+    .article-card.is-hidden {
+      display: none;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cat-tag {
       display: inline-block;
       font-size: 12px;
       font-weight: 700;
       padding: 3px 10px;
       border-radius: 6px;
-      margin-bottom: 12px;
-      width: fit-content;
+      background: var(--primary-soft);
+      color: var(--primary);
     }
-    .tag-gift {
-      background: var(--accent-light);
-      color: #c2410c;
+
+    .cat-tag--sports {
+      background: var(--accent-soft);
+      color: var(--accent);
     }
-    .tag-sports {
-      background: var(--primary-light);
-      color: var(--primary-dark);
+
+    .cat-tag--life {
+      background: #fef3c7;
+      color: #92400e;
     }
-    .card h2 {
-      font-size: 1.15rem;
-      line-height: 1.45;
-      color: #1e293b;
-      margin-bottom: 10px;
+
+    .update-date {
+      font-size: 12px;
+      color: var(--text-light);
     }
-    .card p {
+
+    .card-title {
+      margin: 0 0 10px;
+      font-size: clamp(17px, 4.2vw, 19px);
+      line-height: 1.42;
+      color: #0f172a;
+    }
+
+    .card-title a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .card-summary {
+      margin: 0 0 14px;
       font-size: 14px;
       color: var(--text-muted);
-      margin-bottom: 16px;
+      line-height: 1.65;
     }
-    .card-points {
-      list-style: none;
-      background: #f8fafc;
+
+    .check-box {
+      background: var(--surface-alt);
       border-radius: 10px;
       padding: 12px 14px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       font-size: 13px;
-      color: #334155;
     }
-    .card-points li + li {
-      margin-top: 6px;
-    }
-    .card-btn {
-      display: block;
-      text-align: center;
-      background: var(--primary);
-      color: #ffffff;
-      text-decoration: none;
+
+    .check-box-title {
       font-weight: 700;
-      font-size: 14px;
-      padding: 12px 16px;
-      border-radius: 999px;
-      transition: background 0.18s ease;
+      color: var(--text);
+      margin-bottom: 6px;
+      font-size: 12.5px;
     }
-    .card-btn:hover {
-      background: var(--primary-dark);
-    }
-    .card-btn-orange {
-      background: var(--accent);
-    }
-    .card-btn-orange:hover {
-      background: #ea580c;
-    }
-    .policy-box {
-      background: var(--bg-white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-    }
-    .policy-box h2 {
-      font-size: 1.05rem;
-      margin-bottom: 10px;
-      color: #1e293b;
-    }
-    .policy-box p {
-      font-size: 13.5px;
+
+    .check-list {
+      margin: 0;
+      padding-left: 18px;
       color: var(--text-muted);
     }
-    .policy-box p + p {
-      margin-top: 8px;
+
+    .check-list li {
+      margin-bottom: 3px;
     }
-    footer {
-      background: #1e293b;
-      color: #cbd5e1;
+
+    .check-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .card-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 14.5px;
+      border-radius: 10px;
       text-align: center;
-      font-size: 12.5px;
-      padding: 24px 16px;
+      transition: background-color 0.15s ease;
+    }
+
+    .card-cta:hover {
+      background: var(--primary-hover);
+    }
+
+    /* 該当なしメッセージ */
+    .empty-state {
+      display: none;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 28px 16px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 44px;
+    }
+
+    .empty-state.is-visible {
+      display: block;
+    }
+
+    /* 編集方針・選定基準（E-E-A-T強化セクション） */
+    .policy-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(20px, 4vw, 28px);
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 760px) {
+      .policy-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .policy-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .policy-num {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--primary-soft);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+
+    .policy-item h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      color: #0f172a;
+    }
+
+    .policy-item p {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* 運営情報・免責事項（ASP審査対策） */
+    .info-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(20px, 4vw, 28px);
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 13.5px;
+    }
+
+    .info-table th,
+    .info-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .info-table th {
+      width: 28%;
+      min-width: 110px;
+      color: var(--text);
+      background: var(--surface-alt);
+      font-weight: 700;
+    }
+
+    .info-table td {
+      color: var(--text-muted);
+    }
+
+    .info-table tr:last-child th,
+    .info-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* フッター */
+    .site-footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 28px 16px;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .copyright {
+      color: #94a3b8;
+      font-size: 12px;
+      margin: 0;
     }
   </style>
 </head>
 <body>
-  <div class="pr-bar">※当サイトはアフィリエイトプログラムを利用しており、一部ページにプロモーション（広告）が含まれています。</div>
 
-  <header>
-    <div class="container">
-      <span class="site-badge">暮らし・ギフト・学びのセレクトガイド</span>
-      <h1>暮らしと家族の便利アイテム＆サービス案内所</h1>
-      <p class="lead">日々の暮らしや家族の節目に役立つアイテム・サービスを厳選し、選び方のポイントや申し込み・購入前の確認事項を分かりやすくまとめています。</p>
+  <!-- 広告・アフィリエイト表記（景品表示法・ステマ規制対応） -->
+  <div class="pr-banner" role="note">
+    【広告表記】当サイトはアフィリエイト広告（成果報酬型広告）を利用しています。各案内ページでは公式情報をもとにメリットだけでなく注意点や事前確認事項も中立的に整理しています。
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="./" class="site-brand">
+        <span class="brand-badge" aria-hidden="true">案内</span>
+        <span>暮らしと家族の便利アイテム＆サービス案内所</span>
+      </a>
+      <nav class="header-nav" aria-label="ページ内ナビゲーション">
+        <a href="#guides">案内記事一覧</a>
+        <a href="#policy">比較・選定基準</a>
+        <a href="#about">運営情報・免責</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <div class="container">
-      <h2 class="section-title">特集・案内ページ一覧</h2>
-
-      <div class="article-grid">
-        <!-- 記事1：ウッディプッディ -->
-        <article class="card">
+  <!-- ファーストビュー -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">失敗しないための事前確認ポータル</span>
+      <h1>家族の「買ってよかった・始めてよかった」を支える選び方案内所</h1>
+      <p class="hero-lead">
+        知育ギフト・子どもの習い事・毎日の家事を助ける便利サービスまで、公式サイトを見るだけでは分かりにくい<strong>「料金の仕組み」「向いているご家庭」「申し込み前の注意点」</strong>を1ページずつ丁寧に整理しています。
+      </p>
+      <div class="hero-points">
+        <div class="hero-point">
           <div>
-            <span class="card-tag tag-gift">知育玩具・お誕生日ギフト</span>
-            <h2>ウッディプッディのおままごとギフト選び｜木箱入り・名入れ対応商品の選び方</h2>
-            <p>磁石内蔵で繰り返し切れる木のおままごとセットについて、はじめてのセット選びから名入れギフト・納期確認のポイントまで整理しました。</p>
-            <ul class="card-points">
-              <li>✓ 木箱入りサラダセットと名入れ対応商品の違い</li>
-              <li>✓ 対象年齢（3歳くらい〜）や包装・発送予定の確認点</li>
-            </ul>
+            <strong>1. 対象年齢・条件の明確化</strong>
+            <span>「うちの子・わが家に合うか」を最初に判断できる基準を掲載</span>
           </div>
-          <a href="./toys/" class="card-btn card-btn-orange">案内ページを見る →</a>
+        </div>
+        <div class="hero-point">
+          <div>
+            <strong>2. メリットと注意点を両面解説</strong>
+            <span>良い点だけでなく、購入・体験前に確認すべき弱点も隠さず整理</span>
+          </div>
+        </div>
+        <div class="hero-point">
+          <div>
+            <strong>3. 公式キャンペーン・体験導線</strong>
+            <span>納得した上でそのまま公式の正規ルートへ進める安心設計</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- メインコンテンツ -->
+  <main class="container">
+
+    <!-- 記事一覧セクション -->
+    <section id="guides" aria-labelledby="guides-heading">
+      <div class="section-header">
+        <h2 id="guides-heading" class="section-title">公開中の選び方・事前確認ガイド</h2>
+        <p class="section-desc">気になるジャンルで絞り込むか、各ガイドの詳細ページから確認ポイントをご覧ください。</p>
+      </div>
+
+      <!-- カテゴリ絞り込みフィルター -->
+      <div class="filter-bar" role="group" aria-label="カテゴリ絞り込み">
+        <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">すべて</button>
+        <button type="button" class="filter-btn" data-filter="gift" aria-pressed="false">ギフト・知育</button>
+        <button type="button" class="filter-btn" data-filter="lesson" aria-pressed="false">習い事・学び</button>
+        <button type="button" class="filter-btn" data-filter="life" aria-pressed="false">暮らし・生活</button>
+        <span class="article-count" id="article-count" aria-live="polite">全 2 件を表示中</span>
+      </div>
+
+      <!-- 記事カードグリッド -->
+      <div class="article-grid" id="article-grid">
+
+        <!-- 記事1：ウッディプッディ -->
+        <article class="article-card" data-category="gift">
+          <div>
+            <div class="card-meta">
+              <span class="cat-tag">ギフト・知育</span>
+              <time class="update-date" datetime="2026-11-22">案内公開中</time>
+            </div>
+            <h3 class="card-title">
+              <a href="./toys/">ウッディプッディのおままごとギフト選び｜年齢別の失敗しない選び方と注意点</a>
+            </h3>
+            <p class="card-summary">
+              誕生日・クリスマス・出産祝いで人気の木製おままごと「ウッディプッディ」。マグネット式の安全性やセット内容の違い、購入前に確認したいサイズ感・対象年齢の選び方をまとめました。
+            </p>
+            <div class="check-box">
+              <div class="check-box-title">この案内ページで確認できること</div>
+              <ul class="check-list">
+                <li>1歳〜3歳以上の年齢別おすすめセットの選び方</li>
+                <li>マグネット埋め込み構造の安全性と他社木製玩具との違い</li>
+                <li>ラッピング対応・公式ショップ購入時のチェックポイント</li>
+              </ul>
+            </div>
+          </div>
+          <a href="./toys/" class="card-cta">ウッディプッディ選び方ガイドを見る →</a>
         </article>
 
         <!-- 記事2：体育スポーツ家庭教師ファースト -->
-        <article class="card">
+        <article class="article-card" data-category="lesson">
           <div>
-            <span class="card-tag tag-sports">習い事・マンツーマン指導</span>
-            <h2>体育スポーツ家庭教師ファーストの体験案内｜かけっこ・逆上がり・縄跳びの個別指導</h2>
-            <p>「運動が苦手」「集団レッスンだと萎縮してしまう」というお子さま向けに、近所の公園や自宅で受けられる出張型マンツーマン体育指導をまとめました。</p>
-            <ul class="card-points">
-              <li>✓ お子さまのペースに合わせた1対1の指導内容</li>
-              <li>✓ 体験レッスン申し込みの流れと事前確認事項</li>
-            </ul>
+            <div class="card-meta">
+              <span class="cat-tag cat-tag--sports">習い事・学び</span>
+              <time class="update-date" datetime="2026-11-22">案内公開中</time>
+            </div>
+            <h3 class="card-title">
+              <a href="./sports/">体育スポーツ家庭教師ファーストの体験案内｜料金・対象エリア・申し込み前の確認点</a>
+            </h3>
+            <p class="card-summary">
+              かけっこ・鉄棒・跳び箱・水泳などの苦手克服をマンツーマンで支援する「体育スポーツ家庭教師ファースト」。入会前に必ず確認したい対応エリア、料金体系、体験レッスンまでの流れを整理しました。
+            </p>
+            <div class="check-box">
+              <div class="check-box-title">この案内ページで確認できること</div>
+              <ul class="check-list">
+                <li>集団教室ではなくマンツーマン指導が向いている子の特徴</li>
+                <li>入会金・指導料・交通費など総額費用の確認ポイント</li>
+                <li>体験申し込み前に準備しておく希望種目・場所の決め方</li>
+              </ul>
+            </div>
           </div>
-          <a href="./sports/" class="card-btn">案内ページを見る →</a>
+          <a href="./sports/" class="card-cta">スポーツ家庭教師ファースト案内を見る →</a>
         </article>
+
       </div>
 
-      <section class="policy-box">
-        <h2>当サイトのご案内方針について</h2>
-        <p>「暮らしと家族の便利アイテム＆サービス案内所」では、日々の暮らしや記念日の贈り物、習い事・サービス選びにおいて、事前に確認しておきたい条件（対象条件・料金体系・申込手順・注意点など）を整理して掲載しています。</p>
-        <p>最新の価格・キャンペーン・在庫・対応エリア等の詳細は、各案内ページ内のリンク先（公式ストア・公式サイト）にて必ずご確認ください。</p>
-      </section>
-    </div>
+      <!-- 絞り込み時0件表示用 -->
+      <div class="empty-state" id="empty-state">
+        現在このカテゴリの案内記事は準備中です。「すべて」を選択して公開中のガイドをご覧ください。
+      </div>
+    </section>
+
+    <!-- 当案内所の選定・編集ポリシー（E-E-A-T） -->
+    <section id="policy" class="policy-section" aria-labelledby="policy-heading">
+      <div class="section-header">
+        <h2 id="policy-heading" class="section-title">当案内所の編集・比較方針（3つの約束）</h2>
+        <p class="section-desc">読者の皆さまが後悔のない選択をできるよう、以下の基準で各サービス・商品を整理しています。</p>
+      </div>
+      <div class="policy-grid">
+        <div class="policy-item">
+          <span class="policy-num">POINT 01</span>
+          <h3>一次情報・公式規約の確認</h3>
+          <p>料金・対象年齢・解約条件・送料などの重要事項は、必ず各サービスの公式サイトおよび特定商取引法に基づく表記を確認した上で整理しています。</p>
+        </div>
+        <div class="policy-item">
+          <span class="policy-num">POINT 02</span>
+          <h3>向かないケース・注意点も明記</h3>
+          <p>すべての家庭に万能な商品はありません。住環境・予算・お子さまの性格によって「合わない可能性があるケース」を事前に提示します。</p>
+        </div>
+        <div class="policy-item">
+          <span class="policy-num">POINT 03</span>
+          <h3>結論を急がせない情報設計</h3>
+          <p>煽り表現や過度なランキング演出は行わず、ご家庭ごとの優先順位に合わせて落ち着いて比較・検討できる構成を徹底しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 運営情報・免責事項（ASP審査対応） -->
+    <section id="about" class="info-box" aria-labelledby="about-heading">
+      <div class="section-header">
+        <h2 id="about-heading" class="section-title">運営情報・広告掲載および免責事項</h2>
+      </div>
+      <table class="info-table">
+        <tbody>
+          <tr>
+            <th>メディア名</th>
+            <td>暮らしと家族の便利アイテム＆サービス案内所</td>
+          </tr>
+          <tr>
+            <th>サイトURL</th>
+            <td>https://myshop-9nl.pages.dev/</td>
+          </tr>
+          <tr>
+            <th>運営目的</th>
+            <td>子育て世代・ファミリー層向けに、知育玩具・教育サービス・生活利便サービスの選定基準および事前確認ポイントを分かりやすく提供すること。</td>
+          </tr>
+          <tr>
+            <th>広告掲載について</th>
+            <td>当サイトはA8.net等のアフィリエイトプログラムに参加しており、記事内のリンクを経由して商品購入や体験申し込みが行われた場合、運営者に紹介料が支払われることがあります。</td>
+          </tr>
+          <tr>
+            <th>免責事項</th>
+            <td>掲載情報は作成時点の公式情報に基づき正確性を期しておりますが、最新のキャンペーン内容・料金・在庫状況・対応エリアは必ずリンク先の公式サイトにて最終確認をお願いいたします。商品の購入やサービス契約に関する最終判断は利用者様ご自身の責任にてお願いいたします。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 暮らしと家族の便利アイテム＆サービス案内所</p>
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="./">トップページ</a>
+        <a href="./toys/">ウッディプッディ選び方ガイド</a>
+        <a href="./sports/">体育スポーツ家庭教師ファースト案内</a>
+        <a href="#policy">編集・比較方針</a>
+        <a href="#about">運営情報・免責事項</a>
+      </div>
+      <p class="copyright">&copy; 2026 暮らしと家族の便利アイテム＆サービス案内所 All Rights Reserved.</p>
     </div>
   </footer>
+
+  <!-- 軽量バニラJS：カテゴリフィルター -->
+  <script>
+    (function () {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.article-card');
+      const countEl = document.getElementById('article-count');
+      const emptyEl = document.getElementById('empty-state');
+
+      if (!buttons.length || !cards.length) return;
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const filter = btn.getAttribute('data-filter');
+
+          buttons.forEach(function (b) {
+            b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+          });
+
+          let visibleCount = 0;
+          cards.forEach(function (card) {
+            const cat = card.getAttribute('data-category');
+            const show = filter === 'all' || cat === filter;
+            card.classList.toggle('is-hidden', !show);
+            if (show) visibleCount++;
+          });
+
+          if (countEl) {
+            countEl.textContent = visibleCount + ' 件を表示中';
+          }
+          if (emptyEl) {
+            emptyEl.classList.toggle('is-visible', visibleCount === 0);
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
