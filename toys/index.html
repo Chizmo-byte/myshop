@@ -1199,7 +1199,15 @@
         .hero-phrase {
             display: inline-block;
         }
-        
+/* スマホでCTAボタンが改行されないように調整 */
+@media (max-width: 600px) {
+  .cta-btn-wrapper a[href*="a8.net"],
+  .floating-cta a[href*="a8.net"] {
+    font-size: 15px !important;
+    padding: 12px 14px !important;
+    white-space: nowrap !important;
+  }
+}        
     </style>
 </head>
 
