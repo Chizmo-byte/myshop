@@ -678,6 +678,17 @@
   min-height: 48px;
   padding: 14px 16px;
 }
+    /* 運営情報とプライバシー案内の間隔 */
+.privacy-box {
+  margin-top: 28px;
+}
+
+/* 本文中の外部リンク */
+.text-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
   </style>
 </head>
 <body>
@@ -726,13 +737,78 @@
         <div class="hero-point">
           <div>
             <strong>3. 納得して公式サイトへ進める</strong>
-            <span>確認ポイントを押さえた上で公式の正規ページへ移動できます</span>
+<span>
+  各ガイドから公式サイトへ進み、最新の情報や申し込み条件を確認できます
+</span>
           </div>
         </div>
       </div>
     </div>
   </section>
+<!-- プライバシー・外部サービスの利用について -->
+<section
+  id="privacy"
+  class="info-box privacy-box"
+  aria-labelledby="privacy-heading"
+>
+  <div class="section-header">
+    <h2 id="privacy-heading" class="section-title">
+      プライバシー・外部サービスの利用について
+    </h2>
+    <p class="section-desc">
+      アクセス解析および広告リンクに関する情報の取り扱いをご案内します。
+    </p>
+  </div>
 
+  <table class="info-table">
+    <tbody>
+      <tr>
+        <th scope="row">アクセス解析</th>
+        <td>
+          当サイトでは、閲覧状況の把握とサイト改善のために
+          Cloudflare Web Analyticsを利用しています。
+          Cloudflareの説明によると、このサービスは訪問者の個人データを
+          収集・利用しません。
+          詳細は
+          <a
+            class="text-link"
+            href="https://developers.cloudflare.com/web-analytics/about/"
+          >Cloudflare Web Analyticsの公式説明</a>
+          および
+          <a
+            class="text-link"
+            href="https://www.cloudflare.com/privacypolicy/"
+          >Cloudflareのプライバシーポリシー</a>
+          をご確認ください。
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">広告の計測</th>
+        <td>
+          当サイトはA8.netのアフィリエイトプログラムを利用しています。
+          広告の配信や成果計測に伴い、広告サービス提供事業者等が
+          Cookieなどを利用する場合があります。
+          詳細は
+          <a
+            class="text-link"
+            href="https://www.fancs.com/privacy"
+          >株式会社ファンコミュニケーションズのプライバシーポリシー</a>
+          など、各事業者の案内をご確認ください。
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">外部サイトでの入力情報</th>
+        <td>
+          商品購入や体験申し込みの際にリンク先で入力する氏名・住所・連絡先・
+          決済情報などは、移動先の事業者がそれぞれの方針に基づいて取り扱います。
+          入力前に、移動先の運営者情報とプライバシーポリシーをご確認ください。
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
   <!-- メインコンテンツ -->
   <main class="container">
 
@@ -856,18 +932,33 @@
             <th>サイトURL</th>
             <td>https://myshop-9nl.pages.dev/</td>
           </tr>
-          <tr>
-            <th>運営目的</th>
-            <td>ご家族の暮らしや節目に役立つギフト・習い事・サービスの選び方および事前確認ポイントを分かりやすく整理して提供すること。</td>
-          </tr>
+         <tr>
+           <th scope="row">運営目的</th>
+           <td>
+             お子さまの遊びや習い事、贈り物を選ぶご家庭に向けて、
+             商品・サービスの特徴と選び方、購入・申し込み前の確認事項を
+             分かりやすく整理して提供すること。
+           </td>
+         </tr>
           <tr>
             <th>広告掲載について</th>
             <td>当サイトはA8.net等のアフィリエイトプログラムに参加しており、記事内のリンクを経由して商品購入や体験申し込みが行われた場合、運営者に紹介料が支払われることがあります。</td>
           </tr>
-          <tr>
-            <th>免責事項</th>
-            <td>掲載情報は作成時点の公式情報に基づき正確性を期しておりますが、最新のキャンペーン内容・料金・在庫状況・対応エリアは必ずリンク先の公式サイトにて最終確認をお願いいたします。商品の購入やサービス契約に関する最終判断は利用者様ご自身の責任にてお願いいたします。</td>
-          </tr>
+<tr>
+  <th scope="row">免責事項</th>
+  <td>
+    掲載情報の正確性には配慮していますが、
+    料金・在庫・対象年齢・対応エリア・キャンペーン内容等は
+    変更される場合があります。
+    購入・申し込み前に、公式サイトの最新情報、
+    利用規約、返品・キャンセル条件をご確認ください。
+    当サイトは商品・サービスの紹介を行う独立したサイトであり、
+    販売元・サービス提供事業者の公式サイトではありません。
+    契約および商品・サービスの提供主体はリンク先の事業者です。
+    なお、本記載は当サイト運営者が法令上負う責任を
+    一律に免除するものではありません。
+  </td>
+</tr>
         </tbody>
       </table>
     </section>
@@ -883,6 +974,7 @@
         <a href="./sports/">体育スポーツ家庭教師ファースト案内</a>
         <a href="#policy">編集・比較方針</a>
         <a href="#about">運営情報・免責事項</a>
+        <a href="#privacy">プライバシー・外部サービス</a>
       </div>
       <p class="copyright">&copy; 2026 暮らしと家族の便利アイテム＆サービス案内所 All Rights Reserved.</p>
     </div>
