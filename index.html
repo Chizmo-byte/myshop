@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="rho9ZuYvhUNs5tkPMNWwIAT4YTGsJF6OFr8W7ThPsDk" />
-  <title>暮らしと家族の便利アイテム＆サービス案内所｜失敗しない選び方・事前確認ガイド</title>
-  <meta name="description" content="子育て家庭のギフト選び・習い事・暮らしの便利サービスを中立的な視点で整理する比較・案内ポータル。申し込む前に知っておきたい注意点、料金の仕組み、向いているご家庭の特徴を分かりやすく解説します。" />
+  <title>暮らしと家族の便利アイテム＆サービス案内所｜家族に合うギフトと習い事の選び方ガイド</title>
+  <meta name="description" content="お子さまに贈る知育ギフトや、運動の苦手を相談できるマンツーマン指導など、特徴と選び方・購入や申し込み前に押さえたい確認ポイントを分かりやすくまとめています。" />
   <link rel="canonical" href="https://myshop-9nl.pages.dev/" />
 
   <!-- OGP -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="暮らしと家族の便利アイテム＆サービス案内所" />
-  <meta property="og:title" content="暮らしと家族の便利アイテム＆サービス案内所｜失敗しない選び方ガイド" />
-  <meta property="og:description" content="子育て家庭のギフト選び・習い事・暮らしの便利サービスを中立的な視点で整理。申し込み前の確認ポイントを分かりやすく案内します。" />
+  <meta property="og:title" content="暮らしと家族の便利アイテム＆サービス案内所｜家族に合うギフトと習い事の選び方ガイド" />
+  <meta property="og:description" content="お子さまに贈る知育ギフトやマンツーマン体育指導の特徴・選び方・申し込み前の確認ポイントを分かりやすく案内します。" />
   <meta property="og:url" content="https://myshop-9nl.pages.dev/" />
 
   <!-- 構造化データ（WebSite & ItemList） -->
@@ -25,26 +25,25 @@
         "@id": "https://myshop-9nl.pages.dev/#website",
         "url": "https://myshop-9nl.pages.dev/",
         "name": "暮らしと家族の便利アイテム＆サービス案内所",
-        "description": "子育て家庭のギフト選び・習い事・暮らしの便利サービスを中立的な視点で整理する比較・事前確認ガイド",
+        "description": "家族に合うギフトや習い事の特徴と選び方、購入・申し込み前の確認ポイントを整理した案内ポータル",
         "inLanguage": "ja"
       },
       {
         "@type": "ItemList",
         "@id": "https://myshop-9nl.pages.dev/#itemlist",
-        "name": "公開中の選び方・事前確認ガイド一覧",
-        "itemListOrder": "https://schema.org/ItemListOrderDescending",
+        "name": "公開中の選び方・確認ガイド一覧",
         "numberOfItems": 2,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "ウッディプッディのおままごとギフト選び｜年齢別の失敗しない選び方と注意点",
+            "name": "ウッディプッディのおままごとギフト選び｜木箱入り・名入れ対応商品の選び方",
             "url": "https://myshop-9nl.pages.dev/toys/"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "体育スポーツ家庭教師ファーストの体験案内｜料金・対象エリア・申し込み前の確認点",
+            "name": "体育スポーツ家庭教師ファーストの体験案内｜指導の特徴と申し込み前の確認ポイント",
             "url": "https://myshop-9nl.pages.dev/sports/"
           }
         ]
@@ -79,6 +78,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 110px;
       -webkit-text-size-adjust: 100%;
     }
 
@@ -94,6 +94,12 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 4px;
     }
 
     /* PR表記バー（ステマ規制・ASP審査対応） */
@@ -134,6 +140,11 @@
       font-size: clamp(14px, 3.6vw, 17px);
       color: var(--text);
       line-height: 1.3;
+      min-width: 0;
+    }
+
+    .site-brand > span:last-child {
+      overflow-wrap: anywhere;
     }
 
     .brand-badge {
@@ -279,6 +290,10 @@
       align-items: center;
     }
 
+    .filter-bar[hidden] {
+      display: none;
+    }
+
     .filter-btn {
       appearance: none;
       border: 1px solid var(--border);
@@ -341,6 +356,8 @@
       flex-direction: column;
       justify-content: space-between;
       box-shadow: var(--shadow-sm);
+      min-width: 0;
+      overflow-wrap: anywhere;
       transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
     }
 
@@ -376,11 +393,6 @@
     .cat-tag--sports {
       background: var(--accent-soft);
       color: var(--accent);
-    }
-
-    .cat-tag--life {
-      background: #fef3c7;
-      color: #92400e;
     }
 
     .update-date {
@@ -472,7 +484,7 @@
       display: block;
     }
 
-    /* 編集方針・選定基準（E-E-A-T強化セクション） */
+    /* 編集方針・選定基準 */
     .policy-section {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -526,7 +538,7 @@
       line-height: 1.6;
     }
 
-    /* 運営情報・免責事項（ASP審査対策） */
+    /* 運営情報・免責事項 */
     .info-box {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -559,11 +571,32 @@
 
     .info-table td {
       color: var(--text-muted);
+      overflow-wrap: anywhere;
     }
 
     .info-table tr:last-child th,
     .info-table tr:last-child td {
       border-bottom: none;
+    }
+
+    @media (max-width: 480px) {
+      .info-table,
+      .info-table tbody,
+      .info-table tr,
+      .info-table th,
+      .info-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .info-table th {
+        min-width: 0;
+        border-bottom: none;
+      }
+
+      .info-table td {
+        padding-bottom: 16px;
+      }
     }
 
     /* フッター */
@@ -599,13 +632,29 @@
       font-size: 12px;
       margin: 0;
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .article-card,
+      .filter-btn,
+      .card-cta {
+        transition: none;
+      }
+
+      .article-card:hover {
+        transform: none;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- 広告・アフィリエイト表記（景品表示法・ステマ規制対応） -->
+  <!-- 広告・アフィリエイト表記 -->
   <div class="pr-banner" role="note">
-    【広告表記】当サイトはアフィリエイト広告（成果報酬型広告）を利用しています。各案内ページでは公式情報をもとにメリットだけでなく注意点や事前確認事項も中立的に整理しています。
+    【広告表記】当サイトはアフィリエイト広告（成果報酬型広告）を利用しています。各案内ページでは公式情報をもとに特徴と事前確認事項を分かりやすく整理しています。
   </div>
 
   <!-- ヘッダー -->
@@ -626,28 +675,28 @@
   <!-- ファーストビュー -->
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-eyebrow">失敗しないための事前確認ポータル</span>
-      <h1>家族の「買ってよかった・始めてよかった」を支える選び方案内所</h1>
+      <span class="hero-eyebrow">家族に合うギフトと習い事を、選びやすく</span>
+      <h1>家族の「これ、いいね」が見つかる。<br>ギフトと習い事の選び方案内所</h1>
       <p class="hero-lead">
-        知育ギフト・子どもの習い事・毎日の家事を助ける便利サービスまで、公式サイトを見るだけでは分かりにくい<strong>「料金の仕組み」「向いているご家庭」「申し込み前の注意点」</strong>を1ページずつ丁寧に整理しています。
+        お子さまに贈る木のおもちゃや、運動の苦手を相談できるマンツーマン指導。それぞれの特徴と選び方、購入・申し込み前に押さえたいポイントをまとめています。まずは、気になるテーマからご覧ください。
       </p>
       <div class="hero-points">
         <div class="hero-point">
           <div>
-            <strong>1. 対象年齢・条件の明確化</strong>
-            <span>「うちの子・わが家に合うか」を最初に判断できる基準を掲載</span>
+            <strong>1. 興味や目的から選べる</strong>
+            <span>贈る相手やお子さまの目的に合わせて候補を絞り込めます</span>
           </div>
         </div>
         <div class="hero-point">
           <div>
-            <strong>2. メリットと注意点を両面解説</strong>
-            <span>良い点だけでなく、購入・体験前に確認すべき弱点も隠さず整理</span>
+            <strong>2. 特徴と確認事項をまとめて読める</strong>
+            <span>商品の魅力だけでなく、購入・相談前に知っておきたい条件も整理</span>
           </div>
         </div>
         <div class="hero-point">
           <div>
-            <strong>3. 公式キャンペーン・体験導線</strong>
-            <span>納得した上でそのまま公式の正規ルートへ進める安心設計</span>
+            <strong>3. 納得して公式サイトへ進める</strong>
+            <span>確認ポイントを押さえた上で公式の正規ページへ移動できます</span>
           </div>
         </div>
       </div>
@@ -660,16 +709,15 @@
     <!-- 記事一覧セクション -->
     <section id="guides" aria-labelledby="guides-heading">
       <div class="section-header">
-        <h2 id="guides-heading" class="section-title">公開中の選び方・事前確認ガイド</h2>
+        <h2 id="guides-heading" class="section-title">公開中の選び方・確認ガイド</h2>
         <p class="section-desc">気になるジャンルで絞り込むか、各ガイドの詳細ページから確認ポイントをご覧ください。</p>
       </div>
 
-      <!-- カテゴリ絞り込みフィルター -->
-      <div class="filter-bar" role="group" aria-label="カテゴリ絞り込み">
+      <!-- カテゴリ絞り込みフィルター（JS有効時のみ表示） -->
+      <div class="filter-bar" id="filter-bar" role="group" aria-label="カテゴリ絞り込み" hidden>
         <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">すべて</button>
         <button type="button" class="filter-btn" data-filter="gift" aria-pressed="false">ギフト・知育</button>
         <button type="button" class="filter-btn" data-filter="lesson" aria-pressed="false">習い事・学び</button>
-        <button type="button" class="filter-btn" data-filter="life" aria-pressed="false">暮らし・生活</button>
         <span class="article-count" id="article-count" aria-live="polite">全 2 件を表示中</span>
       </div>
 
@@ -681,20 +729,20 @@
           <div>
             <div class="card-meta">
               <span class="cat-tag">ギフト・知育</span>
-              <time class="update-date" datetime="2026-11-22">案内公開中</time>
+              <span class="update-date">案内公開中</span>
             </div>
             <h3 class="card-title">
-              <a href="./toys/">ウッディプッディのおままごとギフト選び｜年齢別の失敗しない選び方と注意点</a>
+              <a href="./toys/">ウッディプッディのおままごとギフト選び｜木箱入り・名入れ対応商品の選び方</a>
             </h3>
             <p class="card-summary">
-              誕生日・クリスマス・出産祝いで人気の木製おままごと「ウッディプッディ」。マグネット式の安全性やセット内容の違い、購入前に確認したいサイズ感・対象年齢の選び方をまとめました。
+              お誕生日やクリスマスに、木のおままごとを贈りたい方へ。木箱入りのサラダセットと名入れ対応商品の選び分け、対象年齢や包装・発送予定の確認ポイントをご紹介します。
             </p>
             <div class="check-box">
-              <div class="check-box-title">この案内ページで確認できること</div>
+              <div class="check-box-title">この案内ページで分かること</div>
               <ul class="check-list">
-                <li>1歳〜3歳以上の年齢別おすすめセットの選び方</li>
-                <li>マグネット埋め込み構造の安全性と他社木製玩具との違い</li>
-                <li>ラッピング対応・公式ショップ購入時のチェックポイント</li>
+                <li>木箱入りセットと名入れ対応商品の選び分け</li>
+                <li>対象年齢・セット内容・ギフト条件の確認ポイント</li>
+                <li>マグネットの構造と使用上の注意</li>
               </ul>
             </div>
           </div>
@@ -706,20 +754,20 @@
           <div>
             <div class="card-meta">
               <span class="cat-tag cat-tag--sports">習い事・学び</span>
-              <time class="update-date" datetime="2026-11-22">案内公開中</time>
+              <span class="update-date">案内公開中</span>
             </div>
             <h3 class="card-title">
-              <a href="./sports/">体育スポーツ家庭教師ファーストの体験案内｜料金・対象エリア・申し込み前の確認点</a>
+              <a href="./sports/">体育スポーツ家庭教師ファーストの体験案内｜指導の特徴と申し込み前の確認ポイント</a>
             </h3>
             <p class="card-summary">
-              かけっこ・鉄棒・跳び箱・水泳などの苦手克服をマンツーマンで支援する「体育スポーツ家庭教師ファースト」。入会前に必ず確認したい対応エリア、料金体系、体験レッスンまでの流れを整理しました。
+              かけっこや逆上がりなど、お子さまの運動の苦手について相談したい方へ。出張型マンツーマン指導の特徴、体験までの流れ、希望種目・指導場所・料金などの確認ポイントをまとめました。
             </p>
             <div class="check-box">
-              <div class="check-box-title">この案内ページで確認できること</div>
+              <div class="check-box-title">この案内ページで分かること</div>
               <ul class="check-list">
-                <li>集団教室ではなくマンツーマン指導が向いている子の特徴</li>
-                <li>入会金・指導料・交通費など総額費用の確認ポイント</li>
-                <li>体験申し込み前に準備しておく希望種目・場所の決め方</li>
+                <li>マンツーマン指導と集団教室の違い</li>
+                <li>担当コーチの選抜と体験レッスンまでの流れ</li>
+                <li>希望種目・指導場所・料金を相談する際のポイント</li>
               </ul>
             </div>
           </div>
@@ -734,32 +782,32 @@
       </div>
     </section>
 
-    <!-- 当案内所の選定・編集ポリシー（E-E-A-T） -->
+    <!-- 当案内所の選定・編集ポリシー -->
     <section id="policy" class="policy-section" aria-labelledby="policy-heading">
       <div class="section-header">
         <h2 id="policy-heading" class="section-title">当案内所の編集・比較方針（3つの約束）</h2>
-        <p class="section-desc">読者の皆さまが後悔のない選択をできるよう、以下の基準で各サービス・商品を整理しています。</p>
+        <p class="section-desc">読者の皆さまが納得して選択できるよう、以下の基準で各サービス・商品を整理しています。</p>
       </div>
       <div class="policy-grid">
         <div class="policy-item">
           <span class="policy-num">POINT 01</span>
-          <h3>一次情報・公式規約の確認</h3>
-          <p>料金・対象年齢・解約条件・送料などの重要事項は、必ず各サービスの公式サイトおよび特定商取引法に基づく表記を確認した上で整理しています。</p>
+          <h3>公式情報の参照と整理</h3>
+          <p>料金・対象年齢・送料・利用条件などは、公式サイトの商品説明や案内ページを参照して整理しています。変更される場合があるため、申し込み時には公式の最新情報をご確認ください。</p>
         </div>
         <div class="policy-item">
           <span class="policy-num">POINT 02</span>
-          <h3>向かないケース・注意点も明記</h3>
-          <p>すべての家庭に万能な商品はありません。住環境・予算・お子さまの性格によって「合わない可能性があるケース」を事前に提示します。</p>
+          <h3>向かないケース・確認点も明記</h3>
+          <p>すべての家庭に万能な商品はありません。住環境・予算・お子さまの性格によって事前に確認しておきたい条件や注意点をあわせて提示します。</p>
         </div>
         <div class="policy-item">
           <span class="policy-num">POINT 03</span>
           <h3>結論を急がせない情報設計</h3>
-          <p>煽り表現や過度なランキング演出は行わず、ご家庭ごとの優先順位に合わせて落ち着いて比較・検討できる構成を徹底しています。</p>
+          <p>煽り表現や過度なランキング演出は行わず、ご家庭ごとの優先順位に合わせて落ち着いて比較・検討できる構成を心がけています。</p>
         </div>
       </div>
     </section>
 
-    <!-- 運営情報・免責事項（ASP審査対応） -->
+    <!-- 運営情報・免責事項 -->
     <section id="about" class="info-box" aria-labelledby="about-heading">
       <div class="section-header">
         <h2 id="about-heading" class="section-title">運営情報・広告掲載および免責事項</h2>
@@ -771,12 +819,16 @@
             <td>暮らしと家族の便利アイテム＆サービス案内所</td>
           </tr>
           <tr>
+            <th>運営者</th>
+            <td>Chizmo</td>
+          </tr>
+          <tr>
             <th>サイトURL</th>
             <td>https://myshop-9nl.pages.dev/</td>
           </tr>
           <tr>
             <th>運営目的</th>
-            <td>子育て世代・ファミリー層向けに、知育玩具・教育サービス・生活利便サービスの選定基準および事前確認ポイントを分かりやすく提供すること。</td>
+            <td>ご家族の暮らしや節目に役立つギフト・習い事・サービスの選び方および事前確認ポイントを分かりやすく整理して提供すること。</td>
           </tr>
           <tr>
             <th>広告掲載について</th>
@@ -809,6 +861,7 @@
   <!-- 軽量バニラJS：カテゴリフィルター -->
   <script>
     (function () {
+      const filterBar = document.getElementById('filter-bar');
       const buttons = document.querySelectorAll('.filter-btn');
       const cards = document.querySelectorAll('.article-card');
       const countEl = document.getElementById('article-count');
@@ -840,6 +893,10 @@
           }
         });
       });
+
+      if (filterBar) {
+        filterBar.hidden = false;
+      }
     })();
   </script>
 </body>
