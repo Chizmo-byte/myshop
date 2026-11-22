@@ -359,6 +359,11 @@
       min-width: 0;
       overflow-wrap: anywhere;
       transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+      border-top: 4px solid var(--primary);
+    }
+
+    .article-card[data-category="lesson"] {
+      border-top-color: var(--accent);
     }
 
     .article-card:hover {
@@ -453,7 +458,8 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      padding: 12px 16px;
+      padding: 14px 16px;
+      min-height: 48px;
       background: var(--primary);
       color: #ffffff;
       font-weight: 700;
@@ -538,12 +544,16 @@
       line-height: 1.6;
     }
 
-    /* 運営情報・免責事項 */
+    /* 運営情報・免責事項・プライバシー */
     .info-box {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: clamp(20px, 4vw, 28px);
+    }
+
+    .privacy-box {
+      margin-top: 28px;
     }
 
     .info-table {
@@ -599,6 +609,13 @@
       }
     }
 
+    /* 本文中の外部リンク */
+    .text-link {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     /* フッター */
     .site-footer {
       background: #0f172a;
@@ -633,6 +650,21 @@
       margin: 0;
     }
 
+    @media (max-width: 520px) {
+      .hero-points {
+        gap: 8px;
+      }
+
+      .hero-point {
+        padding: 10px 12px;
+      }
+
+      .hero-point span {
+        font-size: 12px;
+        line-height: 1.45;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -648,47 +680,6 @@
         transform: none;
       }
     }
-    /* デザイン改善1：カテゴリ別のカード上辺アクセント（記事が増えても自動対応） */
-.article-card {
-  border-top: 4px solid var(--primary);
-}
-
-.article-card[data-category="lesson"] {
-  border-top-color: var(--accent);
-}
-
-/* デザイン改善2：スマホ表示時にヒーロー補足カードをコンパクトにして記事一覧へ早く到達させる */
-@media (max-width: 520px) {
-  .hero-points {
-    gap: 8px;
-  }
-
-  .hero-point {
-    padding: 10px 12px;
-  }
-
-  .hero-point span {
-    font-size: 12px;
-    line-height: 1.45;
-  }
-}
-
-/* デザイン改善3：スマホで指で押しやすいCTAボタン高さ（48px）を確保 */
-.card-cta {
-  min-height: 48px;
-  padding: 14px 16px;
-}
-    /* 運営情報とプライバシー案内の間隔 */
-.privacy-box {
-  margin-top: 28px;
-}
-
-/* 本文中の外部リンク */
-.text-link {
-  color: var(--primary);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
   </style>
 </head>
 <body>
@@ -721,6 +712,7 @@
       <p class="hero-lead">
         お子さまに贈る木のおもちゃや、運動の苦手を相談できるマンツーマン指導。それぞれの特徴と選び方、購入・申し込み前に押さえたいポイントをまとめています。まずは、気になるテーマからご覧ください。
       </p>
+
       <div class="hero-points">
         <div class="hero-point">
           <div>
@@ -728,87 +720,24 @@
             <span>贈る相手やお子さまの目的に合わせて候補を絞り込めます</span>
           </div>
         </div>
+
         <div class="hero-point">
           <div>
             <strong>2. 特徴と確認事項をまとめて読める</strong>
             <span>商品の魅力だけでなく、購入・相談前に知っておきたい条件も整理</span>
           </div>
         </div>
+
         <div class="hero-point">
           <div>
             <strong>3. 納得して公式サイトへ進める</strong>
-<span>
-  各ガイドから公式サイトへ進み、最新の情報や申し込み条件を確認できます
-</span>
+            <span>各ガイドから公式サイトへ進み、最新の情報や申し込み条件を確認できます</span>
           </div>
         </div>
       </div>
     </div>
   </section>
-<!-- プライバシー・外部サービスの利用について -->
-<section
-  id="privacy"
-  class="info-box privacy-box"
-  aria-labelledby="privacy-heading"
->
-  <div class="section-header">
-    <h2 id="privacy-heading" class="section-title">
-      プライバシー・外部サービスの利用について
-    </h2>
-    <p class="section-desc">
-      アクセス解析および広告リンクに関する情報の取り扱いをご案内します。
-    </p>
-  </div>
 
-  <table class="info-table">
-    <tbody>
-      <tr>
-        <th scope="row">アクセス解析</th>
-        <td>
-          当サイトでは、閲覧状況の把握とサイト改善のために
-          Cloudflare Web Analyticsを利用しています。
-          Cloudflareの説明によると、このサービスは訪問者の個人データを
-          収集・利用しません。
-          詳細は
-          <a
-            class="text-link"
-            href="https://developers.cloudflare.com/web-analytics/about/"
-          >Cloudflare Web Analyticsの公式説明</a>
-          および
-          <a
-            class="text-link"
-            href="https://www.cloudflare.com/privacypolicy/"
-          >Cloudflareのプライバシーポリシー</a>
-          をご確認ください。
-        </td>
-      </tr>
-
-      <tr>
-        <th scope="row">広告の計測</th>
-        <td>
-          当サイトはA8.netのアフィリエイトプログラムを利用しています。
-          広告の配信や成果計測に伴い、広告サービス提供事業者等が
-          Cookieなどを利用する場合があります。
-          詳細は
-          <a
-            class="text-link"
-            href="https://www.fancs.com/privacy"
-          >株式会社ファンコミュニケーションズのプライバシーポリシー</a>
-          など、各事業者の案内をご確認ください。
-        </td>
-      </tr>
-
-      <tr>
-        <th scope="row">外部サイトでの入力情報</th>
-        <td>
-          商品購入や体験申し込みの際にリンク先で入力する氏名・住所・連絡先・
-          決済情報などは、移動先の事業者がそれぞれの方針に基づいて取り扱います。
-          入力前に、移動先の運営者情報とプライバシーポリシーをご確認ください。
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
   <!-- メインコンテンツ -->
   <main class="container">
 
@@ -837,12 +766,15 @@
               <span class="cat-tag">ギフト・知育</span>
               <span class="update-date">案内公開中</span>
             </div>
+
             <h3 class="card-title">
               <a href="./toys/">ウッディプッディのおままごとギフト選び｜木箱入り・名入れ対応商品の選び方</a>
             </h3>
+
             <p class="card-summary">
               お誕生日やクリスマスに、木のおままごとを贈りたい方へ。木箱入りのサラダセットと名入れ対応商品の選び分け、対象年齢や包装・発送予定の確認ポイントをご紹介します。
             </p>
+
             <div class="check-box">
               <div class="check-box-title">この案内ページで分かること</div>
               <ul class="check-list">
@@ -852,6 +784,7 @@
               </ul>
             </div>
           </div>
+
           <a href="./toys/" class="card-cta">ウッディプッディ選び方ガイドを見る →</a>
         </article>
 
@@ -862,12 +795,15 @@
               <span class="cat-tag cat-tag--sports">習い事・学び</span>
               <span class="update-date">案内公開中</span>
             </div>
+
             <h3 class="card-title">
               <a href="./sports/">体育スポーツ家庭教師ファーストの体験案内｜指導の特徴と申し込み前の確認ポイント</a>
             </h3>
+
             <p class="card-summary">
               かけっこや逆上がりなど、お子さまの運動の苦手について相談したい方へ。出張型マンツーマン指導の特徴、体験までの流れ、希望種目・指導場所・料金などの確認ポイントをまとめました。
             </p>
+
             <div class="check-box">
               <div class="check-box-title">この案内ページで分かること</div>
               <ul class="check-list">
@@ -877,6 +813,7 @@
               </ul>
             </div>
           </div>
+
           <a href="./sports/" class="card-cta">スポーツ家庭教師ファースト案内を見る →</a>
         </article>
 
@@ -894,17 +831,20 @@
         <h2 id="policy-heading" class="section-title">当案内所の編集・比較方針（3つの約束）</h2>
         <p class="section-desc">読者の皆さまが納得して選択できるよう、以下の基準で各サービス・商品を整理しています。</p>
       </div>
+
       <div class="policy-grid">
         <div class="policy-item">
           <span class="policy-num">POINT 01</span>
           <h3>公式情報の参照と整理</h3>
           <p>料金・対象年齢・送料・利用条件などは、公式サイトの商品説明や案内ページを参照して整理しています。変更される場合があるため、申し込み時には公式の最新情報をご確認ください。</p>
         </div>
+
         <div class="policy-item">
           <span class="policy-num">POINT 02</span>
           <h3>向かないケース・確認点も明記</h3>
           <p>すべての家庭に万能な商品はありません。住環境・予算・お子さまの性格によって事前に確認しておきたい条件や注意点をあわせて提示します。</p>
         </div>
+
         <div class="policy-item">
           <span class="policy-num">POINT 03</span>
           <h3>結論を急がせない情報設計</h3>
@@ -918,47 +858,115 @@
       <div class="section-header">
         <h2 id="about-heading" class="section-title">運営情報・広告掲載および免責事項</h2>
       </div>
+
       <table class="info-table">
         <tbody>
           <tr>
-            <th>メディア名</th>
+            <th scope="row">メディア名</th>
             <td>暮らしと家族の便利アイテム＆サービス案内所</td>
           </tr>
+
           <tr>
-            <th>運営者</th>
+            <th scope="row">運営者</th>
             <td>Chizmo</td>
           </tr>
+
           <tr>
-            <th>サイトURL</th>
+            <th scope="row">サイトURL</th>
             <td>https://myshop-9nl.pages.dev/</td>
           </tr>
-         <tr>
-           <th scope="row">運営目的</th>
-           <td>
-             お子さまの遊びや習い事、贈り物を選ぶご家庭に向けて、
-             商品・サービスの特徴と選び方、購入・申し込み前の確認事項を
-             分かりやすく整理して提供すること。
-           </td>
-         </tr>
+
           <tr>
-            <th>広告掲載について</th>
-            <td>当サイトはA8.net等のアフィリエイトプログラムに参加しており、記事内のリンクを経由して商品購入や体験申し込みが行われた場合、運営者に紹介料が支払われることがあります。</td>
+            <th scope="row">運営目的</th>
+            <td>
+              お子さまの遊びや習い事、贈り物を選ぶご家庭に向けて、
+              商品・サービスの特徴と選び方、購入・申し込み前の確認事項を
+              分かりやすく整理して提供すること。
+            </td>
           </tr>
-<tr>
-  <th scope="row">免責事項</th>
-  <td>
-    掲載情報の正確性には配慮していますが、
-    料金・在庫・対象年齢・対応エリア・キャンペーン内容等は
-    変更される場合があります。
-    購入・申し込み前に、公式サイトの最新情報、
-    利用規約、返品・キャンセル条件をご確認ください。
-    当サイトは商品・サービスの紹介を行う独立したサイトであり、
-    販売元・サービス提供事業者の公式サイトではありません。
-    契約および商品・サービスの提供主体はリンク先の事業者です。
-    なお、本記載は当サイト運営者が法令上負う責任を
-    一律に免除するものではありません。
-  </td>
-</tr>
+
+          <tr>
+            <th scope="row">広告掲載について</th>
+            <td>
+              当サイトはA8.netのアフィリエイトプログラムに参加しています。
+              記事内のリンクを経由して商品購入や体験申し込みが行われた場合、
+              運営者に紹介料が支払われることがあります。
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">免責事項</th>
+            <td>
+              掲載情報の正確性には配慮していますが、
+              料金・在庫・対象年齢・対応エリア・キャンペーン内容等は
+              変更される場合があります。
+              購入・申し込み前に、公式サイトの最新情報、
+              利用規約、返品・キャンセル条件をご確認ください。
+              当サイトは商品・サービスの紹介を行う独立したサイトであり、
+              販売元・サービス提供事業者の公式サイトではありません。
+              契約および商品・サービスの提供主体はリンク先の事業者です。
+              なお、本記載は当サイト運営者が法令上負う責任を
+              一律に免除するものではありません。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- プライバシー・外部サービスの利用について -->
+    <section id="privacy" class="info-box privacy-box" aria-labelledby="privacy-heading">
+      <div class="section-header">
+        <h2 id="privacy-heading" class="section-title">
+          プライバシー・外部サービスの利用について
+        </h2>
+        <p class="section-desc">
+          アクセス解析および広告リンクに関する情報の取り扱いをご案内します。
+        </p>
+      </div>
+
+      <table class="info-table">
+        <tbody>
+          <tr>
+            <th scope="row">アクセス解析</th>
+            <td>
+              当サイトでは、閲覧状況の把握とサイト改善のために
+              Cloudflare Web Analyticsを利用しています。
+              Cloudflareの説明によると、このサービスは訪問者の個人データを
+              収集・利用しません。
+              詳細は
+              <a class="text-link" href="https://developers.cloudflare.com/web-analytics/about/">
+                Cloudflare Web Analyticsの公式説明
+              </a>
+              および
+              <a class="text-link" href="https://www.cloudflare.com/privacypolicy/">
+                Cloudflareのプライバシーポリシー
+              </a>
+              をご確認ください。
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">広告の計測</th>
+            <td>
+              当サイトはA8.netのアフィリエイトプログラムを利用しています。
+              広告の配信や成果計測に伴い、広告サービス提供事業者等が
+              Cookieなどを利用する場合があります。
+              詳細は
+              <a class="text-link" href="https://www.fancs.com/privacy">
+                株式会社ファンコミュニケーションズのプライバシーポリシー
+              </a>
+              など、各事業者の案内をご確認ください。
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">外部サイトでの入力情報</th>
+            <td>
+              商品購入や体験申し込みの際にリンク先で入力する氏名・住所・連絡先・
+              決済情報などは、移動先の事業者がそれぞれの方針に基づいて取り扱います。
+              入力前に、移動先の運営者情報とプライバシーポリシーをご確認ください。
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -976,7 +984,10 @@
         <a href="#about">運営情報・免責事項</a>
         <a href="#privacy">プライバシー・外部サービス</a>
       </div>
-      <p class="copyright">&copy; 2026 暮らしと家族の便利アイテム＆サービス案内所 All Rights Reserved.</p>
+
+      <p class="copyright">
+        &copy; 2026 暮らしと家族の便利アイテム＆サービス案内所 All Rights Reserved.
+      </p>
     </div>
   </footer>
 
@@ -1000,16 +1011,19 @@
           });
 
           let visibleCount = 0;
+
           cards.forEach(function (card) {
             const cat = card.getAttribute('data-category');
             const show = filter === 'all' || cat === filter;
             card.classList.toggle('is-hidden', !show);
+
             if (show) visibleCount++;
           });
 
           if (countEl) {
             countEl.textContent = visibleCount + ' 件を表示中';
           }
+
           if (emptyEl) {
             emptyEl.classList.toggle('is-visible', visibleCount === 0);
           }
