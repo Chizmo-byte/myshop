@@ -292,6 +292,9 @@
         }
 
         .hero-lead {
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 22px;
             color: var(--wood-800);
             font-size: 14px;
@@ -1182,6 +1185,21 @@
                 transform: none !important;
             }
         }
+
+        /* ファーストビューの文字・バッジを中央寄せ */
+        .hero {
+            text-align: center;
+        }
+        
+        /* 見出しは意味のまとまりごとに折り返す */
+        .hero-title-line {
+            display: block;
+        }
+
+        .hero-phrase {
+            display: inline-block;
+        }
+        
     </style>
 </head>
 
@@ -1213,21 +1231,23 @@
                 <span>お誕生日・クリスマスの贈り物に</span>
             </div>
 
-            <h1 class="hero-title" id="hero-title">
-                トントン切って、<br>
-                「はい、どうぞ！」<br>
-                <span class="hero-title-accent">
-                    木のおままごとを、<br>記念日の贈り物に。
-                </span>
-            </h1>
+<h1 class="hero-title" id="hero-title">
+    <span class="hero-title-line">
+        <span class="hero-phrase">トントン切って、</span><span class="hero-phrase">「はい、どうぞ！」</span>
+    </span>
 
-            <p class="hero-lead">
-                野菜を切る、料理を並べる、お店屋さんになりきる。<br>
-                お子さまの「まねしてみたい」に合わせて選ぶ、
-                ウッディプッディの木のおままごと。<br>
-                はじめてのセット選びから、名前を添えるギフトまで、
-                候補を絞ってご紹介します。
-            </p>
+    <span class="hero-title-line hero-title-accent">
+        <span class="hero-phrase">木のおままごとを、</span><span class="hero-phrase">記念日の贈り物に。</span>
+    </span>
+</h1>
+
+<p class="hero-lead">
+    野菜を切る、料理を並べる、お店屋さんになりきる。
+    お子さまの「まねしてみたい」に合わせて選ぶ、
+    ウッディプッディの木のおままごと。
+    はじめてのセット選びから、名前を添えるギフトまで、
+    候補を絞ってご紹介します。
+</p>
 
             <div class="benefits">
                 <div class="benefit">
