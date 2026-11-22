@@ -131,12 +131,11 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      width: 100%;
     }
 
     .header-wrapper {
       width: 100%;
-      max-width: 720px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
@@ -144,27 +143,27 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 56px;
+      min-height: 58px;
       padding: 8px 14px;
-      gap: 10px;
+      gap: 8px;
     }
 
     .brand-logo {
       display: flex;
       flex-direction: column;
-      flex: 1;
       min-width: 0;
     }
 
     .brand-sub {
-      font-size: 0.62rem;
+      font-size: 0.56rem;
       color: var(--primary-green);
       font-weight: 700;
-      line-height: 1.3;
+      line-height: 1.25;
+      white-space: nowrap;
     }
 
     .brand-name {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 800;
       color: var(--text-main);
       letter-spacing: -0.02em;
@@ -176,30 +175,13 @@
       white-space: nowrap;
       background-color: var(--accent-orange);
       color: #fff;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      padding: 8px 13px;
+      padding: 7px 12px;
       border-radius: 50px;
       box-shadow: 0 2px 6px rgba(245, 124, 0, 0.28);
-      text-decoration: none;
     }
 
-    @media (max-width: 380px) {
-      .header-inner {
-        padding: 8px 10px;
-        gap: 6px;
-      }
-      .brand-sub {
-        font-size: 0.56rem;
-      }
-      .brand-name {
-        font-size: 0.78rem;
-      }
-      .header-cta {
-        font-size: 0.68rem;
-        padding: 7px 10px;
-      }
-    }
     /* =========================================
        共通セクション・見出し・CTAボタン
        ========================================= */
@@ -298,7 +280,15 @@
        ========================================= */
     .hero {
       background: linear-gradient(180deg, #eaf8f1 0%, #f4fafd 65%, #ffffff 100%);
-      padding: 28px 0 46px;
+      padding: 16px 0 46px;
+    }
+
+    .pr-disclosure {
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.4;
     }
 
     .hero-badges {
@@ -594,6 +584,11 @@
       color: var(--text-muted);
     }
 
+    .reason-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
     .subject-tags {
       display: flex;
       flex-wrap: wrap;
@@ -790,7 +785,60 @@
     .footer-note {
       color: #90a4ae;
       line-height: 1.65;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .footer-policy {
+      max-width: 680px;
+      margin: 0 auto 18px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .footer-policy summary {
+      padding: 10px 14px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #eceff1;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-policy summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .footer-policy summary::after {
+      content: "▼";
+      font-size: 0.65rem;
+      color: #90a4ae;
+      transition: transform 0.15s;
+    }
+
+    .footer-policy[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .footer-policy-body {
+      padding: 12px 14px 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.73rem;
+      color: #b0bec5;
+      line-height: 1.7;
+    }
+
+    .footer-policy-body p {
+      margin-bottom: 8px;
+    }
+
+    .footer-policy-body p:last-child {
+      margin-bottom: 0;
     }
 
     .sticky-cta-bar {
@@ -893,6 +941,8 @@
          ========================================= -->
     <section class="hero">
       <div class="container">
+        <p class="pr-disclosure">【PR】当サイトはアフィリエイト広告を利用しています</p>
+
         <div class="hero-badges">
           <span class="hero-badge">幼児（3歳以上）〜小学生対象</span>
           <span class="hero-badge">完全マンツーマン指導</span>
@@ -1095,10 +1145,10 @@
           <article class="reason-card">
             <div class="reason-head">
               <span class="reason-num">理由<br>02</span>
-              <h3 class="reason-title">全国2万名以上の教師陣から専任スタッフが丁寧に選抜</h3>
+              <h3 class="reason-title">全国2万名以上の教師陣<span class="reason-note">（※公式サイト掲載の登録教師数）</span>から専任スタッフが丁寧に選抜</h3>
             </div>
             <p class="reason-desc">
-              全国2万名以上の登録教師の中から、専任スタッフがお子様のご希望や性格、目的に合わせてコーチを選抜します。単なるマッチングサイトとは異なり、1998年創業以来培ったノウハウと誠実な運営体制で、お子様が安心して力を発揮できる環境を整えます。
+              全国2万名以上の登録教師<span class="reason-note">（※公式サイト掲載の登録教師数）</span>の中から、専任スタッフがお子様のご希望や性格、目的に合わせてコーチを選抜します。単なるマッチングサイトとは異なり、1998年創業以来培ったノウハウと誠実な運営体制で、お子様が安心して力を発揮できる環境を整えます。
             </p>
           </article>
 
@@ -1268,8 +1318,19 @@
       <p class="footer-company">体育スポーツ家庭教師ファースト（運営：株式会社エムズグラント／1998年創業）</p>
       <p class="footer-note">
         ※本ページは「体育スポーツ家庭教師ファースト」の体験案内を目的とした紹介ページです。<br>
-        ※対応エリア、料金、体験対象条件などの詳細は、リンク先の公式サイトにて必ずご確認ください。
+        ※特定商取引法に基づく表記、サービス詳細、最新の体験料金につきましては、リンク先の公式サイトにて必ずご確認ください。
       </p>
+
+      <details class="footer-policy">
+        <summary>プライバシーポリシー・免責事項</summary>
+        <div class="footer-policy-body">
+          <p><strong>【アクセス解析・広告配信とCookieの利用について】</strong><br>
+          当サイト（運営者：子どもの「できた！」応援ナビ 運営事務局）では、利便性向上や利用状況の把握のためのアクセス解析ツール、およびアフィリエイトプログラム（成果報酬型広告）を利用しています。これらに伴い、ブラウザのCookie（クッキー）を使用して閲覧情報や広告経由の計測情報を収集する場合がありますが、個人を特定できる情報は含まれません。Cookieの収集はブラウザの設定により無効にすることが可能です。</p>
+          <p><strong>【免責事項】</strong><br>
+          当サイトに掲載している情報は可能な限り正確な内容を心がけておりますが、料金体系・対象条件・キャンペーン内容等は変更される場合があります。当サイトは紹介ページであり、実際の体験授業や契約・サービス提供に関する責任はリンク先の各公式サイト（運営事業者）に帰属いたします。お申し込みの際は必ず公式サイトの最新情報および利用規約・特定商取引法に基づく表記をご確認ください。</p>
+        </div>
+      </details>
+
       <p>&copy; 2026 子どもの「できた！」応援ナビ</p>
     </div>
   </footer>
