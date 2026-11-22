@@ -1,8 +1,1320 @@
-以下のHTMLコードについて、スマホ画面（幅375px〜390px程度）で見たときに文字の改行位置が不自然にならないよう、次の3点だけを微調整した完全なHTMLコードを出力してください。
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>体育スポーツ家庭教師ファースト｜お子様だけのマンツーマン出張体育指導・体験案内</title>
+  <meta name="description" content="「運動が苦手…」「逆上がりやかけっこがうまくできない」とお悩みの幼児（3歳以上）〜小学生のお子様へ。体育スポーツ家庭教師ファーストは、専任スタッフが選抜したコーチがご自宅近くの公園などへ出張するマンツーマン指導です。">
+  <meta name="keywords" content="体育家庭教師,スポーツ家庭教師,マンツーマン指導,かけっこ,逆上がり,縄跳び,水泳,運動苦手,小学生,幼児,出張指導">
+  <meta property="og:title" content="体育スポーツ家庭教師ファースト｜「運動が苦手…」が「できた！」に変わるマンツーマン体育指導">
+  <meta property="og:description" content="人目を気にせず自分のペースで「できた！」を実感できる出張型マンツーマン指導。まずは体験授業からお気軽にご相談ください。">
+  <meta property="og:type" content="website">
 
-1. ヘッダー左側のタイトルが途中で「…」と省略されないよう、「子どもの「できた！」応援ナビ」の短い表記にし、スマホでも1行または2行で綺麗に収まるフォントサイズに調整する
-2. ファーストビューのh1見出しが「体育指 / 導」のように1文字だけ改行されないよう、スマホ時のフォントサイズを少し調整（または適切な位置に<br>を配置）してバランスを整える
-3. 「POINT 01」のカード内のテキスト「人目が気にならない」が最後の1文字だけ改行されないよう、カードの左右余白やフォントサイズを微調整する
+  <!-- SEO構造化データ（FAQPage JSON-LD） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "運動神経が悪くても大丈夫？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、大丈夫です。1対1のマンツーマン指導ですので、集団レッスンと異なり周りのペースに合わせる必要がありません。お子様の体力や性格に合わせて、スモールステップで丁寧に指導いたします。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "親がずっと付き添う必要はある？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "幼児（3歳以上）や低学年のお子様の場合は安全面から近くで見守っていただくことをおすすめしておりますが、指導自体は担当コーチにお任せいただけます。最初の挨拶と終了後の振り返りにお立ち会いいただければ、合間に家事や下のお子様のご対応をしていただくことも可能です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "自宅の近くの公園でも指導してもらえる？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、通いやすい近所の公園や広場など、ご希望の場所へコーチが出張いたします。鉄棒がある公園を指定して逆上がりの練習をしたり、走りやすい広場でかけっこのフォームを教わったりと、目的に合わせて場所をお選びいただけます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "無理な勧誘はない？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1998年創業以来、強引な営業のない誠実な運営を心がけております。実際に担当するコーチでの体験授業を通じて相性や雰囲気をご確認いただいた上で、ご家庭でじっくりご検討いただけますのでご安心ください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "体験指導の料金は？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "体験授業の料金や最新の案内内容については、公式サイトの案内ページまたは申し込みフォームよりご確認いただけます（4か月未満の短期レッスンは対象外となる場合があります）。"
+        }
+      }
+    ]
+  }
+  </script>
 
-【元のHTMLコード】
-（ここに現在のHTMLコードを貼り付け）
+  <style>
+    /* =========================================
+       カラー変数（爽やか・安心・誠実）
+       ========================================= */
+    :root {
+      --primary-green: #22a06b;
+      --primary-green-dark: #187d52;
+      --primary-green-light: #eaf8f1;
+      --sky-blue: #2b8cbe;
+      --sky-blue-light: #edf7fc;
+      --accent-orange: #f57c00;
+      --accent-orange-hover: #e56c00;
+      --accent-orange-shadow: #bf5800;
+      --bg-white: #ffffff;
+      --bg-gray: #f7faf9;
+      --text-main: #2d3748;
+      --text-muted: #546273;
+      --border-color: #dce6e2;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 6px 20px rgba(34, 160, 107, 0.08);
+    }
+
+- {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-white);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 78px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    /* =========================================
+       ヘッダー
+       ========================================= */
+.site-header {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 8px 14px;
+  gap: 8px;
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brand-sub {
+  font-size: 0.56rem;
+  color: var(--primary-green);
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.brand-name {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.header-cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+  background-color: var(--accent-orange);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(245, 124, 0, 0.28);
+}
+
+.sticky-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.96);
+  border-top: 1px solid var(--border-color);
+  padding: 10px 18px;
+  z-index: 999;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.sticky-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #ff9021 0%, var(--accent-orange) 100%);
+  color: #fff;
+  font-size: 0.94rem;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 50px;
+  box-shadow: 0 3px 0 var(--accent-orange-shadow);
+}
+
+    /* =========================================
+       共通セクション・見出し・CTAボタン
+       ========================================= */
+    section {
+      padding: 52px 0;
+    }
+
+    .section-bg-tint {
+      background-color: var(--bg-gray);
+    }
+
+    .section-bg-blue {
+      background-color: var(--sky-blue-light);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-label {
+      display: inline-block;
+      background-color: var(--primary-green-light);
+      color: var(--primary-green-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      line-height: 1.45;
+      color: var(--text-main);
+    }
+
+    .section-title .accent-green {
+      color: var(--primary-green);
+    }
+
+    .section-title .accent-blue {
+      color: var(--sky-blue);
+    }
+
+    .cta-box {
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    .cta-microcopy {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--primary-green-dark);
+      margin-bottom: 8px;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 450px;
+      background: linear-gradient(180deg, #ff9021 0%, var(--accent-orange) 100%);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 18px 22px;
+      border-radius: 50px;
+      box-shadow: 0 5px 0 var(--accent-orange-shadow), 0 8px 18px rgba(245, 124, 0, 0.25);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 var(--accent-orange-shadow), 0 5px 12px rgba(245, 124, 0, 0.22);
+    }
+
+    .btn-cta::after {
+      content: "›";
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .cta-note {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    /* =========================================
+1. ファーストビュー
+       ========================================= */
+    .hero {
+      background: linear-gradient(180deg, #eaf8f1 0%, #f4fafd 65%, #ffffff 100%);
+      padding: 28px 0 46px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .hero-badge {
+      background-color: #fff;
+      border: 1.5px solid var(--primary-green);
+      color: var(--primary-green-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 50px;
+    }
+
+    .hero-title {
+      text-align: center;
+      font-size: 1.42rem;
+      font-weight: 800;
+      line-height: 1.42;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(transparent 62%, #ffe082 62%);
+      padding: 0 2px;
+    }
+
+    .hero-title .em-green {
+      color: var(--primary-green);
+    }
+
+    .hero-lead {
+      text-align: center;
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin: 20px 0 22px;
+    }
+
+    .hero-point-item {
+      background-color: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 12px 3px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-point-num {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--sky-blue);
+    }
+
+    .hero-point-text {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-top: 2px;
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+    }
+
+    /* =========================================
+2. 共感チェックリスト
+       ========================================= */
+    .checklist-card {
+      background-color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .checklist-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed #e2ece8;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .checklist-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .checklist-box {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--primary-green);
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-green-light);
+      color: var(--primary-green);
+      font-weight: 900;
+      font-size: 0.9rem;
+      margin-top: 2px;
+      transition: all 0.15s;
+    }
+
+    .checklist-item.is-checked .checklist-box {
+      background-color: var(--primary-green);
+      color: #fff;
+    }
+
+    .empathy-bridge {
+      margin-top: 22px;
+      background-color: var(--primary-green-light);
+      border-left: 5px solid var(--primary-green);
+      padding: 18px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .empathy-bridge-title {
+      font-size: 1.03rem;
+      font-weight: 800;
+      color: var(--primary-green-dark);
+      margin-bottom: 6px;
+    }
+
+    .empathy-bridge p {
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    /* =========================================
+3. マンツーマン vs グループレッスン比較表
+       ========================================= */
+    .compare-intro {
+      text-align: center;
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+
+    .compare-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      background-color: #fff;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 320px;
+      font-size: 0.87rem;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 14px 10px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      vertical-align: middle;
+    }
+
+    .compare-table thead th {
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .compare-table thead th:first-child {
+      background-color: #f1f5f4;
+      width: 24%;
+      color: var(--text-muted);
+    }
+
+    .compare-table thead th.col-first {
+      background-color: var(--primary-green);
+      color: #fff;
+      width: 40%;
+      font-size: 0.95rem;
+    }
+
+    .compare-table thead th.col-group {
+      background-color: #e4ecef;
+      color: #4a5568;
+      width: 36%;
+    }
+
+    .compare-table tbody th {
+      background-color: #f8fbfa;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .compare-table td.col-first {
+      background-color: #f4fcf8;
+      font-weight: 700;
+      color: var(--primary-green-dark);
+    }
+
+    .compare-badge-good {
+      display: inline-block;
+      background-color: var(--primary-green);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 50px;
+      margin-bottom: 4px;
+    }
+
+    .compare-badge-neutral {
+      display: inline-block;
+      background-color: #cbd5e0;
+      color: #2d3748;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 50px;
+      margin-bottom: 4px;
+    }
+
+    /* =========================================
+4. 選ばれる3つの理由
+       ========================================= */
+    .reasons-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .reason-card {
+      background-color: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .reason-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .reason-num {
+      flex-shrink: 0;
+      background-color: var(--sky-blue);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 6px 12px;
+      border-radius: 8px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .reason-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.4;
+    }
+
+    .reason-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .subject-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .subject-tag {
+      background-color: var(--sky-blue-light);
+      color: var(--sky-blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* =========================================
+5. 体験指導申し込みまでの簡単3ステップ
+       ========================================= */
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-card {
+      background-color: #fff;
+      border-radius: var(--radius-md);
+      padding: 20px 18px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-badge {
+      display: inline-block;
+      background-color: var(--accent-orange);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 12px;
+      border-radius: 50px;
+      margin-bottom: 8px;
+    }
+
+    .step-title {
+      font-size: 1.04rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .step-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .step-supplement {
+      margin-top: 16px;
+      background-color: #f8fbfa;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* =========================================
+6. よくある質問（Q&A アコーディオン）
+       ========================================= */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background-color: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 18px 44px 18px 16px;
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: var(--text-main);
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+      font-family: inherit;
+    }
+
+    .faq-q-mark {
+      flex-shrink: 0;
+      background-color: var(--primary-green);
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .faq-question::after {
+      content: "+";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--primary-green);
+    }
+
+    .faq-item.is-open .faq-question::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 14px 18px 18px 52px;
+      font-size: 0.91rem;
+      color: var(--text-muted);
+      border-top: 1px solid #f0f5f3;
+    }
+
+    .js-enabled .faq-answer {
+      display: none;
+    }
+    .js-enabled .faq-item.is-open .faq-answer {
+      display: block;
+    }
+
+    /* =========================================
+7. クロージング
+       ========================================= */
+    .closing {
+      background: linear-gradient(180deg, #eaf8f1 0%, #d9f2e6 100%);
+      text-align: center;
+    }
+
+    .closing-card {
+      background-color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px 20px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .closing-title {
+      font-size: 1.36rem;
+      font-weight: 800;
+      line-height: 1.45;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+
+    .closing-text {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    /* =========================================
+       フッター & スマホ追従CTAバー
+       ========================================= */
+    .site-footer {
+      background-color: #263238;
+      color: #cfd8dc;
+      padding: 32px 0 42px;
+      font-size: 0.78rem;
+      text-align: center;
+    }
+
+    .footer-company {
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .footer-note {
+      color: #90a4ae;
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+
+    .sticky-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.96);
+      border-top: 1px solid var(--border-color);
+      padding: 10px 16px;
+      z-index: 999;
+      box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .sticky-cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #ff9021 0%, var(--accent-orange) 100%);
+      color: #fff;
+      font-size: 0.96rem;
+      font-weight: 800;
+      padding: 13px 18px;
+      border-radius: 50px;
+      box-shadow: 0 3px 0 var(--accent-orange-shadow);
+    }
+
+    .sticky-cta-btn::after {
+      content: "›";
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    @media (min-width: 640px) {
+      .brand-name {
+        font-size: 0.92rem;
+      }
+
+      .hero-title {
+        font-size: 2.05rem;
+        letter-spacing: normal;
+      }
+
+      .section-title {
+        font-size: 1.72rem;
+      }
+
+      .hero-points {
+        gap: 14px;
+      }
+
+      .hero-point-item {
+        padding: 16px 12px;
+      }
+
+      .hero-point-num {
+        font-size: 0.72rem;
+      }
+
+      .hero-point-text {
+        font-size: 0.96rem;
+        letter-spacing: normal;
+      }
+
+      .steps-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .closing-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-wrapper">
+      <div class="header-inner">
+        <div class="brand-logo">
+          <span class="brand-sub">出張型マンツーマン体育指導（1998年創業）</span>
+          <span class="brand-name">子どもの「できた！」応援ナビ</span>
+        </div>
+        <a href="https://www.taiiku-sports.com/" class="header-cta" rel="nofollow noopener">体験授業を申し込む</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================
+1. ファーストビュー
+         ========================================= -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badges">
+          <span class="hero-badge">幼児（3歳以上）〜小学生対象</span>
+          <span class="hero-badge">完全マンツーマン指導</span>
+          <span class="hero-badge">近所の公園などへ出張</span>
+        </div>
+
+        <h1 class="hero-title">
+          「運動が苦手…」が<br>
+          <span class="highlight">「できた！」</span>に変わる。<br>
+          お子様だけの<span class="em-green">マンツーマン体育指導</span>
+        </h1>
+
+        <p class="hero-lead">
+          かけっこ・逆上がり・縄跳び・水泳・球技など、一人ひとりのペースに合わせて専任スタッフが選抜したコーチが丁寧にサポート。人目を気にせず、まずは実際の担当コーチによる体験授業をお試しいただけます。
+        </p>
+
+        <div class="hero-points">
+          <div class="hero-point-item">
+            <span class="hero-point-num">POINT 01</span>
+            <span class="hero-point-text">1対1だから<br>人目が気にならない</span>
+          </div>
+          <div class="hero-point-item">
+            <span class="hero-point-num">POINT 02</span>
+            <span class="hero-point-text">担当コーチで<br>体験授業が可能</span>
+          </div>
+          <div class="hero-point-item">
+            <span class="hero-point-num">POINT 03</span>
+            <span class="hero-point-text">近所の公園など<br>好きな場所へ出張</span>
+          </div>
+        </div>
+
+        <div class="cta-box">
+          <p class="cta-microcopy">＼ まずは実際の担当コーチと相性をチェック ／</p>
+          <a href="https://www.taiiku-sports.com/" class="btn-cta" rel="nofollow noopener">
+            体験授業の申し込み・詳細はこちら
+          </a>
+          <p class="cta-note">※WEB申し込み後、30日以内の体験授業受講が対象です（ご新規様・3歳以上のお子様が対象）</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+2. 共感チェックリスト
+         ========================================= -->
+    <section class="section-bg-tint">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">お悩みチェック</span>
+          <h2 class="section-title">
+            お子様の運動について、<br>
+            <span class="accent-green">こんなお悩み</span>ありませんか？
+          </h2>
+        </div>
+
+        <div class="checklist-card">
+          <ul class="checklist-items" id="empathy-checklist">
+            <li class="checklist-item is-checked" tabindex="0">
+              <span class="checklist-box" aria-hidden="true">✓</span>
+              <span>運動会のかけっこでいつもビリになり、走ることに自信をなくしている</span>
+            </li>
+            <li class="checklist-item is-checked" tabindex="0">
+              <span class="checklist-box" aria-hidden="true">✓</span>
+              <span>鉄棒の逆上がりや縄跳びがうまくいかず、悔しくて泣いてしまう</span>
+            </li>
+            <li class="checklist-item is-checked" tabindex="0">
+              <span class="checklist-box" aria-hidden="true">✓</span>
+              <span>親が教えようとすると、つい声が大きくなってケンカになってしまう</span>
+            </li>
+            <li class="checklist-item is-checked" tabindex="0">
+              <span class="checklist-box" aria-hidden="true">✓</span>
+              <span>集団の体操教室は「他の子と比べられるのが恥ずかしい」と嫌がる</span>
+            </li>
+            <li class="checklist-item is-checked" tabindex="0">
+              <span class="checklist-box" aria-hidden="true">✓</span>
+              <span>運動への苦手意識が強く、外遊びや体育の授業を楽しめていない</span>
+            </li>
+          </ul>
+
+          <div class="empathy-bridge">
+            <p class="empathy-bridge-title">ひとつでも当てはまったら、練習の進め方を見直すタイミングです。</p>
+            <p>
+              「できない」と感じているお子様の多くは、体力や素質が足りないというよりも、<strong>自分の体に合ったコツや順番</strong>をまだつかめていない段階にあります。親子だと照れや甘え、もどかしさが出やすい練習も、マンツーマンで寄り添うコーチと一緒なら落ち着いて取り組みやすくなります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+3. なぜマンツーマンの体育家庭教師が良いのか？（比較表）
+         ========================================= -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">指導スタイルの違い</span>
+          <h2 class="section-title">
+            なぜ<span class="accent-blue">マンツーマンの体育家庭教師</span>が<br>
+            苦手克服に向いているの？
+          </h2>
+        </div>
+
+        <p class="compare-intro">
+          一般的なグループレッスンの体操教室と、出張型マンツーマン指導の違いを比較しました。
+        </p>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>比較項目</th>
+                <th class="col-first">体育スポーツ<br>家庭教師ファースト</th>
+                <th class="col-group">一般的な<br>集団体操教室</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>人目・心理面</th>
+                <td class="col-first">
+                  <span class="compare-badge-good">1対1で安心</span><br>
+                  周囲の目や他の子と比べられるプレッシャーが少なく挑戦しやすい
+                </td>
+                <td>
+                  <span class="compare-badge-neutral">周囲が気になる</span><br>
+                  得意な子と自分を比べてしまい、恥ずかしさや緊張を感じることがある
+                </td>
+              </tr>
+              <tr>
+                <th>指導密度・<br>練習量</th>
+                <td class="col-first">
+                  <span class="compare-badge-good">キメ細やかに指導</span><br>
+                  順番待ちが少なく、動きのクセに合わせてその場でアドバイスできる
+                </td>
+                <td>
+                  <span class="compare-badge-neutral">待ち時間が発生</span><br>
+                  複数人をまとめて見るため、一人あたりの指導や試行回数が限られる
+                </td>
+              </tr>
+              <tr>
+                <th>カリキュラムの<br>柔軟性</th>
+                <td class="col-first">
+                  <span class="compare-badge-good">ニーズに合わせて調整</span><br>
+                  「逆上がりを練習したい」「走り方を整えたい」など目標に寄り添う
+                </td>
+                <td>
+                  <span class="compare-badge-neutral">固定カリキュラム</span><br>
+                  教室の進行スケジュールに沿うため、個別の弱点対策は後回しになりやすい
+                </td>
+              </tr>
+              <tr>
+                <th>場所・通いやすさ</th>
+                <td class="col-first">
+                  <span class="compare-badge-good">希望の場所へ出張</span><br>
+                  近所の公園や広場など通いやすい場所を指定でき、日程も相談しやすい
+                </td>
+                <td>
+                  <span class="compare-badge-neutral">教室へ通学</span><br>
+                  決まった曜日・時間に教室へ通う必要があり、送迎の負担がかかる場合がある
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+4. 体育スポーツ家庭教師ファーストが選ばれる3つの理由
+         ========================================= -->
+    <section class="section-bg-blue">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">選ばれる理由</span>
+          <h2 class="section-title">
+            体育スポーツ家庭教師ファーストが<br>
+            <span class="accent-green">選ばれる3つの理由</span>
+          </h2>
+        </div>
+
+        <div class="reasons-list">
+          <!-- 理由1 -->
+          <article class="reason-card">
+            <div class="reason-head">
+              <span class="reason-num">理由<br>01</span>
+              <h3 class="reason-title">お子様の苦手に合わせたオーダーメイド指導</h3>
+            </div>
+            <p class="reason-desc">
+              かけっこ・陸上、逆上がりなどの学校体育、縄跳び、水泳・スイミング、サッカー・野球といった球技まで、お子様の目標や苦手に合わせて指導内容を組み立てます。1対1だからこそ、集団指導では目の届きにくい細かな動きまで丁寧にサポートできます。
+            </p>
+            <div class="subject-tags">
+              <span class="subject-tag">かけっこ・陸上</span>
+              <span class="subject-tag">学校体育・逆上がり</span>
+              <span class="subject-tag">縄跳び</span>
+              <span class="subject-tag">水泳・スイミング</span>
+              <span class="subject-tag">サッカー・野球</span>
+              <span class="subject-tag">基礎体力づくり</span>
+            </div>
+          </article>
+
+          <!-- 理由2 -->
+          <article class="reason-card">
+            <div class="reason-head">
+              <span class="reason-num">理由<br>02</span>
+              <h3 class="reason-title">全国2万名以上の教師陣から専任スタッフが丁寧に選抜</h3>
+            </div>
+            <p class="reason-desc">
+              全国2万名以上の登録教師の中から、専任スタッフがお子様のご希望や性格、目的に合わせてコーチを選抜します。単なるマッチングサイトとは異なり、1998年創業以来培ったノウハウと誠実な運営体制で、お子様が安心して力を発揮できる環境を整えます。
+            </p>
+          </article>
+
+          <!-- 理由3 -->
+          <article class="reason-card">
+            <div class="reason-head">
+              <span class="reason-num">理由<br>03</span>
+              <h3 class="reason-title">実際に担当するコーチでの体験授業で安心感を実感</h3>
+            </div>
+            <p class="reason-desc">
+              マンツーマン指導では「コーチとの相性」が大切です。入会前に、実際に担当するコーチでの体験授業を受講できるため、お子様の反応や指導の進め方を確認してからご検討いただけます（※4か月未満の短期レッスンを除きます）。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+5. 体験指導申し込みまでの簡単3ステップ
+         ========================================= -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">ご利用の流れ</span>
+          <h2 class="section-title">
+            体験授業申し込みまでの<br>
+            <span class="accent-green">簡単3ステップ</span>
+          </h2>
+        </div>
+
+        <ol class="steps-list">
+          <li class="step-card">
+            <span class="step-badge">STEP 1</span>
+            <h3 class="step-title">WEBフォームから申し込み</h3>
+            <p class="step-desc">
+              下記のボタンから公式サイトへ進み、お子様の年齢・学年やご希望の種目、練習場所のエリアなどを入力して送信します。
+            </p>
+          </li>
+          <li class="step-card">
+            <span class="step-badge">STEP 2</span>
+            <h3 class="step-title">コーチ選抜・日程と場所の調整</h3>
+            <p class="step-desc">
+              専任スタッフがお子様に合うコーチを選抜し、ご都合の良い日時や近所の公園・広場などの指導場所を調整します。
+            </p>
+          </li>
+          <li class="step-card">
+            <span class="step-badge">STEP 3</span>
+            <h3 class="step-title">体験授業の受講</h3>
+            <p class="step-desc">
+              当日は動きやすい服装でお集まりいただき、実際に担当するコーチによるマンツーマン体験授業をご受講ください。
+            </p>
+          </li>
+        </ol>
+
+        <div class="step-supplement">
+          <strong>【ご利用にあたってのご案内】</strong><br>
+          体験授業は、WEB申し込み後30日以内の受講完了が対象となります。また、0歳〜2歳児のお子様、すでに会員様である場合、1世帯2回目以降のお申し込み、特殊すぎる種目等でコーチをご紹介できない場合、体験のみを目的としたご利用等は対象外となりますのであらかじめご了承ください。
+        </div>
+
+        <div class="cta-box">
+          <p class="cta-microcopy">＼ スマホからかんたん入力・まずは体験から ／</p>
+          <a href="https://www.taiiku-sports.com/" class="btn-cta" rel="nofollow noopener">
+            体験授業の申し込み・詳細はこちら
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+6. よくある質問（Q&A形式）
+         ========================================= -->
+    <section class="section-bg-tint">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Q&amp;A</span>
+          <h2 class="section-title">
+            親御様から寄せられる<br>
+            <span class="accent-blue">よくある質問</span>
+          </h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item is-open">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span class="faq-q-mark">Q</span>
+              <span>運動神経が悪くても大丈夫？</span>
+            </button>
+            <div class="faq-answer">
+              はい、大丈夫です。1対1のマンツーマン指導ですので、集団レッスンと異なり周りのペースに合わせる必要がありません。お子様の体力や性格に合わせて、スモールステップで丁寧に指導いたします。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-mark">Q</span>
+              <span>親がずっと付き添う必要はある？</span>
+            </button>
+            <div class="faq-answer">
+              幼児（3歳以上）や低学年のお子様の場合は安全面から近くで見守っていただくことをおすすめしておりますが、指導自体は担当コーチにお任せいただけます。最初の挨拶と終了後の振り返りにお立ち会いいただければ、合間に家事や下のお子様のご対応をしていただくことも可能です。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-mark">Q</span>
+              <span>自宅の近くの公園でも指導してもらえる？</span>
+            </button>
+            <div class="faq-answer">
+              はい、通いやすい近所の公園や広場など、ご希望の場所へコーチが出張いたします。鉄棒がある公園を指定して逆上がりの練習をしたり、走りやすい広場でかけっこのフォームを教わったりと、目的に合わせて場所をお選びいただけます。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-mark">Q</span>
+              <span>無理な勧誘はない？</span>
+            </button>
+            <div class="faq-answer">
+              1998年創業以来、強引な営業のない誠実な運営を心がけております。実際に担当するコーチでの体験授業を通じて相性や雰囲気をご確認いただいた上で、ご家庭でじっくりご検討いただけますのでご安心ください。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-mark">Q</span>
+              <span>体験指導の料金は？</span>
+            </button>
+            <div class="faq-answer">
+              体験授業の料金や最新の案内内容については、公式サイトの案内ページまたは申し込みフォームよりご確認いただけます（4か月未満の短期レッスンは対象外となる場合があります）。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+7. クロージング
+         ========================================= -->
+    <section class="closing">
+      <div class="container">
+        <div class="closing-card">
+          <h2 class="closing-title">
+            「できた！」の小さな経験が、<br>
+            <span class="accent-green">お子様の自信と前向きな気持ち</span>を育てます
+          </h2>
+
+          <p class="closing-text">
+            「自分にもできた！」という実体験は、体育や外遊びだけでなく、日々の生活の中で挑戦する力につながっていきます。<br>
+            お子様のペースに寄り添うマンツーマン指導を、まずは体験授業から始めてみませんか？
+          </p>
+
+          <div class="cta-box">
+            <p class="cta-microcopy">＼ お子様の「できた！」を応援する第一歩 ／</p>
+            <a href="https://www.taiiku-sports.com/" class="btn-cta" rel="nofollow noopener">
+              体験授業の申し込みはこちら
+            </a>
+            <p class="cta-note">※体育スポーツ家庭教師ファースト公式サイトへ移動します</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-company">体育スポーツ家庭教師ファースト（運営：株式会社エムズグラント／1998年創業）</p>
+      <p class="footer-note">
+        ※本ページは「体育スポーツ家庭教師ファースト」の体験案内を目的とした紹介ページです。<br>
+        ※対応エリア、料金、体験対象条件などの詳細は、リンク先の公式サイトにて必ずご確認ください。
+      </p>
+      <p>&copy; 2026 子どもの「できた！」応援ナビ</p>
+    </div>
+  </footer>
+
+  <!-- スマホ閲覧時追従CTAバー -->
+  <div class="sticky-cta-bar">
+    <a href="https://www.taiiku-sports.com/" class="sticky-cta-btn" rel="nofollow noopener">
+      体験授業の申し込み・詳細はこちら
+    </a>
+  </div>
+
+  <!-- 軽量バニラJavaScript -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('js-enabled');
+
+      var checkItems = document.querySelectorAll('.checklist-item');
+      checkItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+          item.classList.toggle('is-checked');
+          var box = item.querySelector('.checklist-box');
+          box.textContent = item.classList.contains('is-checked') ? '✓' : '';
+        });
+      });
+
+      var faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var parent = btn.closest('.faq-item');
+          var isOpen = parent.classList.toggle('is-open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
+
+```
