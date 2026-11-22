@@ -334,14 +334,14 @@
         }
 
         /* A8広告タグ自体は変更せず、外側のCSSで装飾 */
-        .cta-btn-wrapper {
+        -wrapper {
             position: relative;
             display: block;
             width: 100%;
             text-align: center;
         }
 
-        .cta-btn-wrapper a[href*="a8.net"] {
+        -wrapper a[href*="a8.net"] {
             position: relative;
             display: inline-flex !important;
             align-items: center !important;
@@ -372,7 +372,7 @@
                 box-shadow .25s ease-in-out !important;
         }
 
-        .cta-btn-wrapper a[href*="a8.net"]::before {
+        -wrapper a[href*="a8.net"]::before {
             position: absolute;
             top: 0;
             left: -100%;
@@ -390,7 +390,7 @@
             pointer-events: none;
         }
 
-        .cta-btn-wrapper a[href*="a8.net"]::after {
+        -wrapper a[href*="a8.net"]::after {
             flex-shrink: 0;
             margin-left: 8px;
             font-size: 1.2rem;
@@ -1161,7 +1161,7 @@
             .cta-btn-wrapper a[href*="a8.net"] {
                 padding-right: 12px !important;
                 padding-left: 12px !important;
-                font-size: 1.05rem !important;
+                font-size: 0.92rem !important;
             }
         }
 
@@ -1199,7 +1199,14 @@
         .hero-phrase {
             display: inline-block;
         }
-        
+/* スマホでCTAボタンが改行されないように調整 */
+@media (max-width: 600px) {
+  .cta-btn-wrapper a[href*="a8.net"],
+  .floating-cta a[href*="a8.net"] {
+    font-size: 15px !important;
+    padding: 12px 14px !important;
+    white-space: nowrap !important;
+  }
     </style>
 </head>
 
