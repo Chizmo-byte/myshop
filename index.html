@@ -84,7 +84,7 @@
       --shadow-md: 0 6px 20px rgba(34, 160, 107, 0.08);
     }
 
-- {
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -111,6 +111,8 @@
 
     ul, ol {
       list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
@@ -123,92 +125,62 @@
     /* =========================================
        ヘッダー
        ========================================= */
-.site-header {
-  background-color: var(--bg-white);
-  border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+    .site-header {
+      background-color: var(--bg-white);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-.header-wrapper {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
+    .header-wrapper {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 58px;
-  padding: 8px 14px;
-  gap: 8px;
-}
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+      padding: 8px 14px;
+      gap: 8px;
+    }
 
-.brand-logo {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
 
-.brand-sub {
-  font-size: 0.56rem;
-  color: var(--primary-green);
-  font-weight: 700;
-  line-height: 1.25;
-  white-space: nowrap;
-}
+    .brand-sub {
+      font-size: 0.56rem;
+      color: var(--primary-green);
+      font-weight: 700;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
 
-.brand-name {
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: var(--text-main);
-  letter-spacing: -0.02em;
-  line-height: 1.3;
-}
+    .brand-name {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
 
-.header-cta {
-  flex-shrink: 0;
-  white-space: nowrap;
-  background-color: var(--accent-orange);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 7px 12px;
-  border-radius: 50px;
-  box-shadow: 0 2px 6px rgba(245, 124, 0, 0.28);
-}
-
-.sticky-cta-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.96);
-  border-top: 1px solid var(--border-color);
-  padding: 10px 18px;
-  z-index: 999;
-  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
-  text-align: center;
-}
-
-.sticky-cta-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  background: linear-gradient(180deg, #ff9021 0%, var(--accent-orange) 100%);
-  color: #fff;
-  font-size: 0.94rem;
-  font-weight: 800;
-  padding: 12px 18px;
-  border-radius: 50px;
-  box-shadow: 0 3px 0 var(--accent-orange-shadow);
-}
+    .header-cta {
+      flex-shrink: 0;
+      white-space: nowrap;
+      background-color: var(--accent-orange);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 7px 12px;
+      border-radius: 50px;
+      box-shadow: 0 2px 6px rgba(245, 124, 0, 0.28);
+    }
 
     /* =========================================
        共通セクション・見出し・CTAボタン
@@ -627,6 +599,8 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+      padding-left: 0;
+      margin: 0;
     }
 
     .step-card {
