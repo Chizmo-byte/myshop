@@ -648,6 +648,36 @@
         transform: none;
       }
     }
+    /* デザイン改善1：カテゴリ別のカード上辺アクセント（記事が増えても自動対応） */
+.article-card {
+  border-top: 4px solid var(--primary);
+}
+
+.article-card[data-category="lesson"] {
+  border-top-color: var(--accent);
+}
+
+/* デザイン改善2：スマホ表示時にヒーロー補足カードをコンパクトにして記事一覧へ早く到達させる */
+@media (max-width: 520px) {
+  .hero-points {
+    gap: 8px;
+  }
+
+  .hero-point {
+    padding: 10px 12px;
+  }
+
+  .hero-point span {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
+
+/* デザイン改善3：スマホで指で押しやすいCTAボタン高さ（48px）を確保 */
+.card-cta {
+  min-height: 48px;
+  padding: 14px 16px;
+}
   </style>
 </head>
 <body>
