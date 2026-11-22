@@ -3,53 +3,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>木のおままごと・知育玩具【ウッディプッディ】公式案内 | 暮らしと家族の便利アイテム＆サービス案内所</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        wood: {
-                            50: '#fdfbf7',
-                            100: '#f7f2e8',
-                            200: '#eee3cf',
-                            300: '#e1cdac',
-                            600: '#9e6d38',
-                            700: '#7e532b',
-                            800: '#5c3c1e',
-                            900: '#3d2511',
-                        },
-                        leaf: {
-                            500: '#48bb78',
-                            600: '#38a169',
-                            700: '#2f855a',
-                        },
-                        warm: {
-                            orange: '#ff6b35',
-                            accent: '#f7931e',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', '"Meiryo"', '"Noto Sans JP"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+
+    <title>ウッディプッディの木のおままごと・知育玩具を紹介 | 暮らしと家族の便利アイテム＆サービス案内所</title>
+    <meta name="description" content="ウッディプッディの木のおままごと・知育玩具をご紹介。マグネットの構造や対象年齢の確認方法、ギフト選びのポイント、お手入れ・使用上の注意をまとめました。購入はリンク先の公式オンラインショップから。">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="暮らしと家族の便利アイテム＆サービス案内所">
+    <meta property="og:title" content="ウッディプッディの木のおままごと・知育玩具を紹介">
+    <meta property="og:description" content="木のおもちゃのギフト選びに。商品の特徴、対象年齢の確認方法、安全に遊ぶための注意点をご紹介します。">
+
     <style>
-        /* 背景グラデーション・木目テクスチャ風パターン */
-        body {
-            background-color: #f7f2e8;
-            background-image: radial-gradient(#e1cdac 0.75px, transparent 0.75px), radial-gradient(#e1cdac 0.75px, #f7f2e8 0.75px);
-            background-size: 30px 30px;
-            background-position: 0 0, 15px 15px;
-            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', 'Noto Sans JP', sans-serif;
-            color: #3d2511;
+        :root {
+            --wood-50: #fdfbf7;
+            --wood-100: #f7f2e8;
+            --wood-200: #eee3cf;
+            --wood-300: #e1cdac;
+            --wood-400: #c2a57b;
+            --wood-600: #9e6d38;
+            --wood-700: #7e532b;
+            --wood-800: #5c3c1e;
+            --wood-900: #3d2511;
+
+            --emerald-50: #ecfdf5;
+            --emerald-100: #d1fae5;
+            --emerald-200: #a7f3d0;
+            --emerald-300: #6ee7b7;
+            --emerald-600: #059669;
+            --emerald-700: #047857;
+            --emerald-800: #065f46;
+            --emerald-900: #064e3b;
+
+            --amber-50: #fffbeb;
+            --amber-100: #fef3c7;
+            --amber-200: #fde68a;
+            --amber-300: #fcd34d;
+            --amber-400: #fbbf24;
+            --amber-700: #b45309;
+            --amber-800: #92400e;
+            --amber-900: #78350f;
+
+            --orange-100: #ffedd5;
+            --orange-200: #fed7aa;
+            --orange-900: #7c2d12;
+
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-700: #374151;
         }
 
-        /* 外部タグ改変ゼロでA8テキストリンクを豪華なCTAボタン化するCSS */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--wood-100);
+            background-image:
+                radial-gradient(var(--wood-300) 0.75px, transparent 0.75px),
+                radial-gradient(var(--wood-300) 0.75px, var(--wood-100) 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            font-family:
+                "Hiragino Kaku Gothic ProN",
+                "Hiragino Sans",
+                "Meiryo",
+                "Noto Sans JP",
+                sans-serif;
+            color: var(--wood-900);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body::selection {
+            background: var(--amber-200);
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+        }
+
+        button,
+        summary,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        summary:focus-visible,
+        [tabindex="0"]:focus-visible {
+            outline: 3px solid #2563eb;
+            outline-offset: 4px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .pr-disclosure {
+            padding: 6px 16px;
+            border-bottom: 1px solid rgba(253, 230, 138, 0.6);
+            background: rgba(254, 243, 199, 0.9);
+            color: var(--amber-900);
+            text-align: center;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--wood-200);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 12px 16px;
+        }
+
+        .site-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 0;
+        }
+
+        .brand-icon {
+            flex-shrink: 0;
+            font-size: 20px;
+        }
+
+        .brand-name {
+            color: var(--wood-800);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .header-badge {
+            flex-shrink: 0;
+            padding: 2px 8px;
+            border: 1px solid var(--emerald-300);
+            border-radius: 9999px;
+            background: var(--emerald-100);
+            color: var(--emerald-800);
+            font-size: 10px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .page-main {
+            max-width: 780px;
+            min-height: 100vh;
+            margin: 0 auto;
+            padding-bottom: 112px;
+            border-right: 1px solid rgba(238, 227, 207, 0.8);
+            border-left: 1px solid rgba(238, 227, 207, 0.8);
+            background: var(--wood-50);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .section {
+            padding: 20px;
+        }
+
+        .section-white {
+            margin: 16px 0;
+            border-top: 1px solid var(--wood-200);
+            border-bottom: 1px solid var(--wood-200);
+            background: #fff;
+        }
+
+        .section-heading {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            background: var(--amber-100);
+            color: var(--amber-700);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .section-label.green {
+            background: var(--emerald-100);
+            color: var(--emerald-700);
+        }
+
+        .section-title {
+            margin-top: 8px;
+            color: var(--wood-900);
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1.4;
+            overflow-wrap: anywhere;
+        }
+
+        .text-green {
+            color: var(--emerald-700);
+        }
+
+        .text-amber {
+            color: var(--amber-800);
+            text-decoration: underline;
+            text-decoration-color: var(--amber-300);
+            text-underline-offset: 3px;
+        }
+
+        .body-copy {
+            color: var(--wood-800);
+            font-size: 12px;
+            line-height: 1.75;
+            overflow-wrap: anywhere;
+        }
+
+        .small-note {
+            margin-top: 10px;
+            color: var(--wood-600);
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        .source-link {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* ファーストビュー */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--wood-200);
+            border-radius: 0 0 24px 24px;
+            background: linear-gradient(
+                to bottom,
+                var(--amber-50),
+                #fff,
+                rgba(254, 243, 199, 0.5)
+            );
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+            padding: 4px 14px;
+            border-radius: 9999px;
+            background: var(--emerald-700);
+            color: #fff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .hero-label svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            fill: var(--amber-300);
+        }
+
+        .hero-title {
+            margin-bottom: 12px;
+            color: var(--wood-900);
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.3;
+            letter-spacing: -0.025em;
+            overflow-wrap: anywhere;
+        }
+
+        .hero-title-accent {
+            color: var(--emerald-700);
+            text-decoration: underline;
+            text-decoration-color: var(--amber-400);
+            text-decoration-style: wavy;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+        }
+
+        @supports (-webkit-background-clip: text) or (background-clip: text) {
+            .hero-title-accent {
+                background: linear-gradient(
+                    to right,
+                    var(--emerald-700),
+                    var(--emerald-600),
+                    var(--wood-700)
+                );
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+        }
+
+        .hero-lead {
+            margin-bottom: 20px;
+            color: var(--wood-800);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.75;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .benefit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+            padding: 10px;
+            border: 1px solid var(--amber-200);
+            border-radius: 12px;
+            background: #fff;
+            text-align: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-icon {
+            margin-bottom: 4px;
+            font-size: 20px;
+        }
+
+        .benefit-text {
+            color: var(--wood-900);
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        /* A8広告タグ自体は変更せず、外側のCSSで表示を調整 */
         .cta-btn-wrapper {
             position: relative;
             display: block;
@@ -58,623 +387,1622 @@
         }
 
         .cta-btn-wrapper a[href*="a8.net"] {
+            position: relative;
             display: inline-flex !important;
             align-items: center !important;
             justify-content: center !important;
             width: 100% !important;
             min-height: 64px !important;
             padding: 14px 20px !important;
-            background: linear-gradient(135deg, #ff7e30 0%, #ff5200 50%, #e04300 100%) !important;
-            color: #ffffff !important;
+            overflow: hidden;
+            border: 2px solid #fff3eb !important;
+            border-radius: 9999px !important;
+            background: linear-gradient(
+                135deg,
+                #ff7e30 0%,
+                #ff5200 50%,
+                #e04300 100%
+            ) !important;
+            color: #fff !important;
+            box-shadow:
+                0 10px 25px -5px rgba(230, 60, 0, 0.5),
+                0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
             font-size: 1.25rem !important;
             font-weight: 800 !important;
             letter-spacing: 0.05em !important;
             text-decoration: none !important;
-            border-radius: 9999px !important;
-            box-shadow: 0 10px 25px -5px rgba(230, 60, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
-            border: 2px solid #fff3eb !important;
-            transition: all 0.25s ease-in-out !important;
-            position: relative;
-            overflow: hidden;
+            overflow-wrap: anywhere;
+            transition:
+                transform 0.25s ease-in-out,
+                box-shadow 0.25s ease-in-out !important;
         }
 
-        /* ボタン光沢キラリ波アニメーション */
         .cta-btn-wrapper a[href*="a8.net"]::before {
-            content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 60%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            content: "";
             transform: skewX(-25deg);
             animation: shine 3s infinite;
+            pointer-events: none;
         }
 
         @keyframes shine {
-            0% { left: -100%; }
-            20% { left: 200%; }
-            100% { left: 200%; }
+            0% {
+                left: -100%;
+            }
+            20% {
+                left: 200%;
+            }
+            100% {
+                left: 200%;
+            }
         }
 
-        .cta-btn-wrapper a[href*="a8.net"]:hover {
-            transform: translateY(-2px) scale(1.02) !important;
-            box-shadow: 0 14px 28px -4px rgba(230, 60, 0, 0.6) !important;
-        }
-
-        /* 矢印アイコン追加 */
         .cta-btn-wrapper a[href*="a8.net"]::after {
-            content: '➜';
+            flex-shrink: 0;
             margin-left: 8px;
             font-size: 1.2rem;
+            content: "➜";
             transition: transform 0.2s ease;
         }
 
-        .cta-btn-wrapper a[href*="a8.net"]:hover::after {
-            transform: translateX(5px);
+        @media (hover: hover) {
+            .cta-btn-wrapper a[href*="a8.net"]:hover {
+                transform: translateY(-2px) scale(1.02) !important;
+                box-shadow:
+                    0 14px 28px -4px rgba(230, 60, 0, 0.6) !important;
+            }
+
+            .cta-btn-wrapper a[href*="a8.net"]:hover::after {
+                transform: translateX(5px);
+            }
         }
 
-        /* A8バナーラッパー */
         .a8-banner-container {
             display: flex;
-            justify-content: center;
             align-items: center;
-            background: #ffffff;
-            padding: 12px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            border: 2px dashed #e1cdac;
+            justify-content: center;
+            max-width: 100%;
             margin: 16px auto;
+            padding: 12px;
+            border: 2px dashed var(--wood-300);
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         }
 
-        /* カスタムパルスアニメーション */
-        @keyframes pulse-subtle {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
+        .a8-banner-container a {
+            display: block;
+            min-width: 0;
+            max-width: 100%;
         }
+
+        .a8-banner-container a img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .a8-banner-container > img {
+            flex: 0 0 1px;
+        }
+
+        .banner-narrow {
+            max-width: 320px;
+        }
+
+        .cta-block {
+            max-width: 448px;
+            margin: 24px auto 0;
+            text-align: center;
+        }
+
+        .cta-microcopy {
+            margin-bottom: 6px;
+            color: var(--emerald-800);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .cta-note {
+            margin-top: 8px;
+            color: var(--wood-600);
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        @keyframes pulse-subtle {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
         .animate-pulse-subtle {
             animation: pulse-subtle 2.5s infinite;
         }
+
+        /* 共感セクション */
+        .trouble-list {
+            display: grid;
+            gap: 14px;
+            max-width: 512px;
+            margin: 0 auto;
+        }
+
+        .trouble-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px;
+            border: 1px solid rgba(253, 230, 138, 0.7);
+            border-radius: 12px;
+            background: rgba(255, 251, 235, 0.8);
+        }
+
+        .trouble-icon {
+            flex-shrink: 0;
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .trouble-item p {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .trouble-item strong {
+            color: #b91c1c;
+        }
+
+        .empathy-bridge {
+            margin-top: 24px;
+            padding: 16px;
+            border: 1px solid var(--emerald-200);
+            border-radius: 16px;
+            background: var(--emerald-50);
+            text-align: center;
+        }
+
+        .empathy-bridge p {
+            color: var(--emerald-900);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .brand-highlight {
+            color: var(--emerald-700);
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        /* 特徴カード */
+        .features {
+            display: grid;
+            gap: 24px;
+        }
+
+        .features .section-heading {
+            margin-bottom: 0;
+        }
+
+        .feature-card {
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            border: 1px solid var(--wood-200);
+            border-radius: 16px;
+            background: #fff;
+            box-shadow:
+                0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-number {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 4px 16px;
+            border-radius: 0 0 0 12px;
+            background: var(--emerald-600);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .feature-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding-top: 10px;
+        }
+
+        .feature-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--amber-100);
+            font-size: 20px;
+        }
+
+        .feature-title {
+            color: var(--wood-900);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .feature-subtitle {
+            display: block;
+            margin-top: 2px;
+            color: var(--emerald-700);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* 比較表 */
+        .table-intro {
+            margin: -8px 0 16px;
+            color: var(--wood-700);
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .comparison-table {
+            width: 100%;
+            min-width: 560px;
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: 12px;
+            line-height: 1.65;
+            text-align: center;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 10px;
+            border: 1px solid var(--gray-200);
+            vertical-align: middle;
+            overflow-wrap: anywhere;
+        }
+
+        .comparison-table thead th {
+            background: var(--gray-100);
+            color: var(--gray-700);
+            font-weight: 700;
+        }
+
+        .comparison-table thead th:first-child {
+            width: 21%;
+            border-color: var(--wood-200);
+            background: var(--wood-100);
+            color: var(--wood-800);
+        }
+
+        .comparison-table thead th.featured-column {
+            border-color: var(--emerald-800);
+            background: var(--emerald-700);
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .comparison-table tbody th {
+            border-color: var(--wood-200);
+            background: var(--wood-50);
+            color: var(--wood-900);
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            color: var(--gray-700);
+        }
+
+        .comparison-table td.featured-column {
+            border-color: var(--emerald-200);
+            background: var(--emerald-50);
+            color: var(--emerald-800);
+            font-weight: 600;
+        }
+
+        .table-note {
+            margin-top: 10px;
+            color: var(--wood-700);
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        /* ギフトガイド */
+        .gift-section {
+            display: grid;
+            gap: 24px;
+        }
+
+        .gift-section .section-heading {
+            margin-bottom: 0;
+        }
+
+        .gift-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            border: 1px solid var(--wood-200);
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .gift-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: var(--amber-100);
+            font-size: 30px;
+        }
+
+        .gift-icon.green {
+            background: var(--emerald-100);
+        }
+
+        .gift-icon.orange {
+            background: var(--orange-100);
+        }
+
+        .gift-label {
+            display: inline-block;
+            margin-bottom: 4px;
+            padding: 2px 10px;
+            border-radius: 6px;
+            background: var(--amber-200);
+            color: var(--wood-900);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .gift-label.green {
+            background: var(--emerald-200);
+            color: var(--emerald-900);
+        }
+
+        .gift-label.orange {
+            background: var(--orange-200);
+            color: var(--orange-900);
+        }
+
+        .gift-title {
+            color: var(--wood-900);
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .gift-card .body-copy {
+            margin-top: 4px;
+            color: var(--wood-700);
+        }
+
+        .gift-message {
+            padding: 20px;
+            border: 2px dashed var(--amber-300);
+            border-radius: 16px;
+            background: rgba(255, 251, 235, 0.9);
+        }
+
+        .gift-message-heading {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .gift-message-icon {
+            flex-shrink: 0;
+            font-size: 20px;
+        }
+
+        /* 中盤CTA */
+        .middle-cta {
+            margin: 16px 0;
+            padding: 24px;
+            background: linear-gradient(
+                to bottom right,
+                var(--emerald-800),
+                var(--emerald-900)
+            );
+            color: #fff;
+            text-align: center;
+        }
+
+        .middle-cta h2 {
+            margin-bottom: 8px;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+
+        .middle-cta .intro {
+            margin-bottom: 20px;
+            color: var(--emerald-100);
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+        .middle-cta .cta-block {
+            margin-top: 0;
+        }
+
+        .middle-cta .cta-microcopy {
+            color: var(--amber-300);
+        }
+
+        /* FAQ：details / summaryでJSなしでも開閉可能 */
+        .faq-section {
+            border-top: 1px solid var(--wood-200);
+            border-bottom: 1px solid var(--wood-200);
+            background: #fff;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 12px;
+            max-width: 512px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            overflow: hidden;
+            border: 1px solid var(--wood-200);
+            border-radius: 12px;
+            background: rgba(253, 251, 247, 0.5);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 16px;
+            color: var(--wood-900);
+            font-size: 12px;
+            font-weight: 700;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-question::after {
+            flex-shrink: 0;
+            color: var(--wood-600);
+            font-size: 20px;
+            line-height: 1;
+            content: "+";
+        }
+
+        .faq-item[open] .faq-question::after {
+            content: "−";
+        }
+
+        .faq-question-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .faq-number {
+            flex-shrink: 0;
+            color: var(--emerald-700);
+            font-weight: 900;
+        }
+
+        .faq-answer {
+            padding: 16px;
+            border-top: 1px solid var(--wood-100);
+            background: #fff;
+            color: var(--wood-800);
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+        /* クロージング */
+        .closing {
+            position: relative;
+            background: linear-gradient(
+                to bottom,
+                rgba(254, 243, 199, 0.6),
+                var(--wood-100)
+            );
+            text-align: center;
+        }
+
+        .closing h2 {
+            margin-bottom: 8px;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+
+        .closing-intro {
+            max-width: 448px;
+            margin: 0 auto 24px;
+            color: var(--wood-800);
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+        /* フッター */
+        .site-footer {
+            padding: 24px;
+            background: var(--wood-900);
+            color: var(--wood-200);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .footer-title {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .footer-note {
+            max-width: 512px;
+            margin: 12px auto 0;
+            color: var(--wood-300);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .footer-policy {
+            max-width: 600px;
+            margin: 16px auto 0;
+            overflow: hidden;
+            border: 1px solid var(--wood-700);
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .footer-policy summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 14px;
+            color: var(--wood-100);
+            font-size: 12px;
+            font-weight: 700;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .footer-policy summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .footer-policy summary::after {
+            flex-shrink: 0;
+            content: "+";
+        }
+
+        .footer-policy[open] summary::after {
+            content: "−";
+        }
+
+        .footer-policy-body {
+            padding: 14px;
+            border-top: 1px solid var(--wood-700);
+            color: var(--wood-300);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .footer-policy-body p + p {
+            margin-top: 12px;
+        }
+
+        .footer-policy-body strong {
+            color: var(--wood-100);
+        }
+
+        .footer-copyright {
+            margin-top: 16px;
+            padding-top: 8px;
+            border-top: 1px solid var(--wood-800);
+            color: var(--wood-400);
+            font-size: 10px;
+        }
+
+        /* 追従CTA */
+        .floating-cta {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 50;
+            padding: 10px;
+            padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+            border-top: 1px solid var(--amber-200);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+        }
+
+        .floating-cta[hidden] {
+            display: none;
+        }
+
+        .floating-inner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .close-cta {
+            position: absolute;
+            top: -38px;
+            right: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            min-height: 28px;
+            padding: 4px 10px;
+            border: 0;
+            border-radius: 6px 6px 0 0;
+            background: var(--wood-800);
+            color: #fff;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .floating-content {
+            width: 100%;
+            min-width: 0;
+        }
+
+        .floating-caption {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            margin-bottom: 2px;
+            color: var(--emerald-800);
+            text-align: center;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        @media (min-width: 640px) {
+            .brand-name {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 32px;
+            }
+
+            .section-title,
+            .middle-cta h2,
+            .closing h2 {
+                font-size: 24px;
+            }
+
+            .hero-title {
+                font-size: 30px;
+            }
+
+            .hero-lead {
+                font-size: 16px;
+            }
+
+            .benefit-text,
+            .cta-microcopy {
+                font-size: 12px;
+            }
+
+            .body-copy,
+            .trouble-item p,
+            .empathy-bridge p,
+            .middle-cta .intro,
+            .closing-intro,
+            .faq-question,
+            .faq-answer,
+            .comparison-table {
+                font-size: 14px;
+            }
+
+            .feature-title {
+                font-size: 18px;
+            }
+
+            .feature-subtitle {
+                font-size: 14px;
+            }
+
+            .brand-highlight {
+                font-size: 18px;
+            }
+
+            .gift-card {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 359px) {
+            .header-inner {
+                gap: 8px;
+                padding-right: 12px;
+                padding-left: 12px;
+            }
+
+            .header-badge {
+                padding-right: 6px;
+                padding-left: 6px;
+                font-size: 9px;
+            }
+
+            .cta-btn-wrapper a[href*="a8.net"] {
+                padding-right: 12px !important;
+                padding-left: 12px !important;
+                font-size: 1.05rem !important;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .animate-pulse-subtle,
+            .cta-btn-wrapper a[href*="a8.net"]::before {
+                animation: none !important;
+            }
+
+            .cta-btn-wrapper a[href*="a8.net"],
+            .cta-btn-wrapper a[href*="a8.net"]::after {
+                transition: none !important;
+            }
+
+            .cta-btn-wrapper a[href*="a8.net"]:hover,
+            .cta-btn-wrapper a[href*="a8.net"]:hover::after {
+                transform: none !important;
+            }
+        }
     </style>
 </head>
-<body class="antialiased text-wood-900 selection:bg-amber-200">
 
-    <!-- 1. 最上部 ステマ規制PR表記 -->
-    <aside class="bg-amber-100/90 text-amber-900 text-xs text-center py-1.5 px-4 border-b border-amber-200/60 font-medium">
-        ※本ページはプロモーション（アフィリエイト広告）が含まれています。
+<body>
+
+    <!-- PR表記 -->
+    <aside class="pr-disclosure" aria-label="広告について">
+        ※本ページにはプロモーション（アフィリエイト広告）が含まれています。
     </aside>
 
     <!-- サイトヘッダー -->
-    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-30 border-b border-wood-200 shadow-sm">
-        <div class="max-w-[780px] mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <span class="text-xl">🏠</span>
-                <span class="font-bold text-xs sm:text-sm tracking-tight text-wood-800">
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="site-brand">
+                <span class="brand-icon" aria-hidden="true">🏠</span>
+                <span class="brand-name">
                     暮らしと家族の便利アイテム＆サービス案内所
                 </span>
             </div>
-            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-300">
+
+            <span class="header-badge">
                 ギフト選びガイド
             </span>
         </div>
     </header>
 
-    <!-- メインコンテナ（PC表示時は780px幅の中央カードスタイル） -->
-    <main class="max-w-[780px] mx-auto bg-wood-50 min-h-screen shadow-2xl border-x border-wood-200/80 pb-28">
+    <main class="page-main">
 
-        <!-- 2. ファーストビュー（FV） -->
-        <section class="relative bg-gradient-to-b from-amber-50 via-white to-amber-100/50 p-5 sm:p-8 rounded-b-3xl border-b border-wood-200 overflow-hidden">
-            <!-- キャッチコピー上部装飾 -->
-            <div class="inline-flex items-center gap-1.5 bg-emerald-700 text-white text-xs font-bold px-3.5 py-1 rounded-full shadow-sm mb-3">
-                <svg class="w-4 h-4 fill-current text-yellow-300" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <span>SNS・ママパパの間で話題沸騰！</span>
+        <!-- ファーストビュー -->
+        <section class="section hero" aria-labelledby="hero-title">
+
+            <div class="hero-label">
+                <svg aria-hidden="true" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                <span>お子さまへの木のおもちゃギフトに</span>
             </div>
 
-            <!-- メインヘッドライン -->
-            <h1 class="text-2xl sm:text-3xl font-extrabold leading-tight tracking-tight text-wood-900 mb-3">
+            <h1 class="hero-title" id="hero-title">
                 トントン、サクッ！<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-emerald-600 to-wood-700 underline decoration-amber-400 decoration-wavy decoration-2">
-                    断面まで本物そっくりな木のおままごと
+                <span class="hero-title-accent">
+                    断面のデザインも楽しい木のおままごと
                 </span>
             </h1>
 
-            <p class="text-sm sm:text-base text-wood-800 font-medium leading-relaxed mb-5">
-                磁石が隠された「埋め込み構造」だから安心安全。<br class="hidden sm:block">
-                出産祝い・お誕生日・クリスマスに、長く愛されるぬくもりの木製知育玩具【ウッディプッディ】。
+            <p class="hero-lead">
+                磁石が表面に出ない「リアルフラット構造」のおままごとなど、
+                木の質感を楽しめる玩具を展開する【ウッディプッディ】。<br>
+                お誕生日やクリスマスの贈り物に、対象年齢や遊び方に合わせて選んでみませんか。
             </p>
 
-            <!-- ベネフィット3点バッジ -->
-            <div class="grid grid-cols-3 gap-2 mb-6">
-                <div class="bg-white p-2.5 rounded-xl border border-amber-200 shadow-sm text-center flex flex-col items-center justify-center">
-                    <span class="text-xl mb-1">🧲</span>
-                    <span class="text-[11px] sm:text-xs font-bold text-wood-900 leading-tight">埋め込み磁石で<br>安心・衛生的</span>
+            <div class="benefits">
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">🧲</span>
+                    <span class="benefit-text">
+                        磁石を覆う<br>リアルフラット構造
+                    </span>
                 </div>
-                <div class="bg-white p-2.5 rounded-xl border border-amber-200 shadow-sm text-center flex flex-col items-center justify-center">
-                    <span class="text-xl mb-1">🛡️</span>
-                    <span class="text-[11px] sm:text-xs font-bold text-wood-900 leading-tight">国内ST基準<br>クリアの安全品質</span>
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">🛡️</span>
+                    <span class="benefit-text">
+                        対象年齢・安全基準は<br>商品ごとに確認
+                    </span>
                 </div>
-                <div class="bg-white p-2.5 rounded-xl border border-amber-200 shadow-sm text-center flex flex-col items-center justify-center">
-                    <span class="text-xl mb-1">🎁</span>
-                    <span class="text-[11px] sm:text-xs font-bold text-wood-900 leading-tight">ギフト包装・<br>名入れ対応</span>
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">🎁</span>
+                    <span class="benefit-text">
+                        包装・名入れの<br>対象商品を確認
+                    </span>
                 </div>
             </div>
 
-            <!-- A8.net バナー広告配置エリア -->
+            <!-- A8.net バナー広告タグ：原文維持 -->
             <div class="a8-banner-container">
-                <!-- A8.net バナー広告タグ（完全改変なし） -->
                 <a href="https://px.a8.net/svt/ejp?a8mat=4BGR8Z+E2NWKY+5DZ2+5YZ75" rel="nofollow">
                 <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=261122291851&wid=001&eno=01&mid=s00000025139001003000&mc=1"></a>
                 <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4BGR8Z+E2NWKY+5DZ2+5YZ75" alt="">
             </div>
 
-            <!-- FV内 CTAエリア -->
-            <div class="mt-6 text-center animate-pulse-subtle">
-                <p class="text-xs sm:text-sm font-bold text-emerald-800 mb-1.5 flex items-center justify-center gap-1">
-                    <span>＼</span> 最短翌日発送・ギフト包装対応 <span>／</span>
-                </p>
-                <div class="cta-btn-wrapper max-w-md mx-auto">
-                    <!-- A8.net テキスト広告タグ（完全改変なし） -->
-                    <a href="https://px.a8.net/svt/ejp?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" rel="nofollow">木のおままごと ウッディプッディ</a>
-                    <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" alt="">
-                </div>
-                <p class="text-[11px] text-wood-600 mt-2">※公式ストアならではの特典・名入れサービスも充実！</p>
-            </div>
-        </section>
-
-
-        <!-- 3. 共感・お悩み提起セクション -->
-        <section class="p-5 sm:p-8 bg-white my-4 border-y border-wood-200">
-            <div class="text-center mb-6">
-                <span class="text-amber-700 bg-amber-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Trouble Check</span>
-                <h2 class="text-xl sm:text-2xl font-bold text-wood-900 mt-2">
-                    0歳〜4歳のプレゼント選び、<br><span class="text-amber-800 underline decoration-amber-300">こんなお悩みありませんか？</span>
-                </h2>
-            </div>
-
-            <div class="space-y-3.5 max-w-lg mx-auto">
-                <div class="flex items-start gap-3 p-3.5 bg-amber-50/80 rounded-xl border border-amber-200/70">
-                    <span class="text-2xl leading-none">😓</span>
-                    <p class="text-xs sm:text-sm font-medium text-wood-900">
-                        せっかくプレゼントしたのに、<strong class="text-red-700">すぐに飽きて遊ばなくなったらどうしよう…</strong>
+            <div class="cta-block">
+                <div class="animate-pulse-subtle">
+                    <p class="cta-microcopy">
+                        ＼ 包装・名入れ・発送予定は公式ストアで確認 ／
                     </p>
-                </div>
-                <div class="flex items-start gap-3 p-3.5 bg-amber-50/80 rounded-xl border border-amber-200/70">
-                    <span class="text-2xl leading-none">🧹</span>
-                    <p class="text-xs sm:text-sm font-medium text-wood-900">
-                        面ファスナー（マジックテープ）タイプは<strong class="text-red-700">ほこりやゴミが溜まって衛生面が心配。すぐくっつかなくなる…</strong>
-                    </p>
-                </div>
-                <div class="flex items-start gap-3 p-3.5 bg-amber-50/80 rounded-xl border border-amber-200/70">
-                    <span class="text-2xl leading-none">⚠️</span>
-                    <p class="text-xs sm:text-sm font-medium text-wood-900">
-                        磁石タイプは魅力的だけど、<strong class="text-red-700">万が一マグネットが取れて誤飲したら怖い…</strong>
-                    </p>
-                </div>
-                <div class="flex items-start gap-3 p-3.5 bg-amber-50/80 rounded-xl border border-amber-200/70">
-                    <span class="text-2xl leading-none">🌿</span>
-                    <p class="text-xs sm:text-sm font-medium text-wood-900">
-                        プラスチックのおもちゃより、<strong class="text-red-700">温もりがあって感性を育む自然素材を贈りたい</strong>
-                    </p>
-                </div>
-            </div>
 
-            <div class="mt-6 bg-emerald-50 p-4 rounded-2xl border border-emerald-200 text-center">
-                <p class="text-xs sm:text-sm font-bold text-emerald-900">
-                    そんなお悩みやこだわりを持つママ・パパ・おじいちゃん・おばあちゃんから<br>
-                    今、絶大な支持を集めているのが<span class="text-emerald-700 text-base sm:text-lg font-extrabold">【ウッディプッディ】</span>です！
+                    <div class="cta-btn-wrapper">
+                        <!-- A8.net テキスト広告タグ：原文維持 -->
+                        <a href="https://px.a8.net/svt/ejp?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" rel="nofollow">木のおままごと ウッディプッディ</a>
+                        <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" alt="">
+                    </div>
+                </div>
+
+                <p class="cta-note">
+                    ※公式ストアへ移動します。対象年齢、付属品、料金、納期をご確認ください。
                 </p>
             </div>
         </section>
 
-
-        <!-- 4. ウッディプッディが選ばれる4つの理由 -->
-        <section class="p-5 sm:p-8 space-y-6">
-            <div class="text-center">
-                <span class="text-emerald-700 bg-emerald-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Features</span>
-                <h2 class="text-xl sm:text-2xl font-extrabold text-wood-900 mt-2">
-                    ウッディプッディのおもちゃが<br><span class="text-emerald-700">選ばれ続ける4つの理由</span>
+        <!-- 共感・お悩み -->
+        <section class="section section-white" aria-labelledby="trouble-title">
+            <div class="section-heading">
+                <span class="section-label">Trouble Check</span>
+                <h2 class="section-title" id="trouble-title">
+                    お子さまへのプレゼント選び、<br>
+                    <span class="text-amber">こんな点が気になりませんか？</span>
                 </h2>
             </div>
 
-            <!-- 理由1 -->
-            <div class="bg-white rounded-2xl p-5 border border-wood-200 shadow-md relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-emerald-600 text-white font-extrabold text-xs px-4 py-1 rounded-bl-xl">
-                    REASON 01
+            <div class="trouble-list">
+                <div class="trouble-item">
+                    <span class="trouble-icon" aria-hidden="true">😓</span>
+                    <p>
+                        せっかく贈るなら、
+                        <strong>お子さまの興味や遊び方に合うものを選びたい</strong>
+                    </p>
                 </div>
-                <div class="flex items-center gap-3 mb-3">
-                    <span class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-xl shrink-0">🧲</span>
-                    <h3 class="font-bold text-base sm:text-lg text-wood-900 leading-snug">
-                        安心の「埋め込み式マグネット」<br>
-                        <span class="text-xs sm:text-sm text-emerald-700 font-semibold">リアルフラット構造で掃除もラクラク</span>
-                    </h3>
+
+                <div class="trouble-item">
+                    <span class="trouble-icon" aria-hidden="true">🧹</span>
+                    <p>
+                        毎日遊ぶおもちゃだから、
+                        <strong>接合部分の構造やお手入れ方法も確認したい</strong>
+                    </p>
                 </div>
-                <p class="text-xs sm:text-sm text-wood-800 leading-relaxed">
-                    磁石が木の中に完全に埋め込まれている独自構造。磁石が直接外に出ないため、誤飲の心配がなく、小さな子どもが舐めても安心です。断面がフラットでお手入れがしやすく、ほこりも溜まりません。
-                </p>
+
+                <div class="trouble-item">
+                    <span class="trouble-icon" aria-hidden="true">⚠️</span>
+                    <p>
+                        マグネットのおもちゃを選ぶときは、
+                        <strong>対象年齢や破損時の注意点が気になる</strong>
+                    </p>
+                </div>
+
+                <div class="trouble-item">
+                    <span class="trouble-icon" aria-hidden="true">🌿</span>
+                    <p>
+                        贈り物には、
+                        <strong>木の質感やデザインを楽しめるものも検討したい</strong>
+                    </p>
+                </div>
             </div>
 
-            <!-- 理由2 -->
-            <div class="bg-white rounded-2xl p-5 border border-wood-200 shadow-md relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-emerald-600 text-white font-extrabold text-xs px-4 py-1 rounded-bl-xl">
-                    REASON 02
-                </div>
-                <div class="flex items-center gap-3 mb-3">
-                    <span class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-xl shrink-0">🍎</span>
-                    <h3 class="font-bold text-base sm:text-lg text-wood-900 leading-snug">
-                        断面まで本物そっくり！<br>
-                        <span class="text-xs sm:text-sm text-emerald-700 font-semibold">サクッと切れる快感とリアルなギミック</span>
-                    </h3>
-                </div>
-                <p class="text-xs sm:text-sm text-wood-800 leading-relaxed">
-                    リンゴやアボカドの種、みかんの皮むき、魚の三枚おろしなど、本物のお料理を再現できる緻密なデザイン。「包丁でサクッと切る」手ごたえは子どもたちを夢中にさせ、手先の器用さや好奇心を育みます。
-                </p>
-            </div>
-
-            <!-- 理由3 -->
-            <div class="bg-white rounded-2xl p-5 border border-wood-200 shadow-md relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-emerald-600 text-white font-extrabold text-xs px-4 py-1 rounded-bl-xl">
-                    REASON 03
-                </div>
-                <div class="flex items-center gap-3 mb-3">
-                    <span class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-xl shrink-0">🛡️</span>
-                    <h3 class="font-bold text-base sm:text-lg text-wood-900 leading-snug">
-                        国内基準「ST」試験クリア<br>
-                        <span class="text-xs sm:text-sm text-emerald-700 font-semibold">厳格な品質管理基準と安全設計</span>
-                    </h3>
-                </div>
-                <p class="text-xs sm:text-sm text-wood-800 leading-relaxed">
-                    日本の玩具安全基準「STマーク」の試験またはそれに準じた第三者機関の試験をクリア。塗料も口に入れても安全な基準をみたしたものを使用し、社内でも二重の品質管理を実施しています。
-                </p>
-            </div>
-
-            <!-- 理由4 -->
-            <div class="bg-white rounded-2xl p-5 border border-wood-200 shadow-md relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-emerald-600 text-white font-extrabold text-xs px-4 py-1 rounded-bl-xl">
-                    REASON 04
-                </div>
-                <div class="flex items-center gap-3 mb-3">
-                    <span class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-xl shrink-0">🌱</span>
-                    <h3 class="font-bold text-base sm:text-lg text-wood-900 leading-snug">
-                        環境にやさしい天然木＆選べるラインナップ<br>
-                        <span class="text-xs sm:text-sm text-emerald-700 font-semibold">単品追加や名入れで特別な贈り物に</span>
-                    </h3>
-                </div>
-                <p class="text-xs sm:text-sm text-wood-800 leading-relaxed">
-                    プラスチックに比べて環境負荷が少なく、使うほどに手に馴染む天然木。成長に合わせて1つずつ買い足せる豊富な種類があり、祖父母からお孫さんへのちょっと贅沢で上質なギフトとしても大好評です。
+            <div class="empathy-bridge">
+                <p>
+                    そんなギフト選びの候補として、<br>
+                    <span class="brand-highlight">【ウッディプッディ】</span>
+                    の特徴や選び方をご紹介します。
                 </p>
             </div>
         </section>
 
-
-        <!-- 5. 比較表セクション -->
-        <section class="p-5 sm:p-8 bg-white my-4 border-y border-wood-200">
-            <div class="text-center mb-6">
-                <span class="text-amber-700 bg-amber-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Comparison</span>
-                <h2 class="text-xl sm:text-2xl font-bold text-wood-900 mt-2">
-                    他タイプとどこが違う？<br><span class="text-emerald-700">おままごと玩具 一目でわかる比較</span>
+        <!-- 特徴 -->
+        <section class="section features" aria-labelledby="features-title">
+            <div class="section-heading">
+                <span class="section-label green">Features</span>
+                <h2 class="section-title" id="features-title">
+                    ウッディプッディを選ぶ前に<br>
+                    <span class="text-green">確認したい4つのポイント</span>
                 </h2>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="w-full text-xs sm:text-sm text-left border-collapse">
+            <article class="feature-card">
+                <div class="feature-number" aria-hidden="true">POINT 01</div>
+
+                <div class="feature-heading">
+                    <span class="feature-icon" aria-hidden="true">🧲</span>
+                    <h3 class="feature-title">
+                        磁石を覆う「リアルフラット構造」
+                        <span class="feature-subtitle">
+                            接合面がフラットな設計
+                        </span>
+                    </h3>
+                </div>
+
+                <p class="body-copy">
+                    リアルフラット構造を採用した商品は、
+                    磁石の上から木栓でふたをして、磁石が表面に露出しない設計になっています。
+                    フラットな断面は、拭き取りやすい点も特徴です。
+                    ただし、破損や誤飲の可能性がなくなるわけではありません。
+                    対象年齢と使用上の注意を守り、遊ぶ前に部品の状態をご確認ください。
+                </p>
+
+                <p class="small-note">
+                    ※破損・変形した場合は使用を中止してください。
+                    磁石が外れた場合は必ず回収し、お子さまの手の届かない場所に保管してください。
+                    構造や注意事項は商品ごとにご確認ください。<br>
+                    参考：
+                    <a class="source-link" href="https://www.woodypuddy.com/f/news230524">
+                        メーカーによるマグネット製品の案内・使用上の注意
+                    </a>
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-number" aria-hidden="true">POINT 02</div>
+
+                <div class="feature-heading">
+                    <span class="feature-icon" aria-hidden="true">🍎</span>
+                    <h3 class="feature-title">
+                        食材の形や断面を楽しむデザイン
+                        <span class="feature-subtitle">
+                            切る・盛り付けるなどのごっこ遊びに
+                        </span>
+                    </h3>
+                </div>
+
+                <p class="body-copy">
+                    野菜やフルーツなど、食材をモチーフにしたおままごとを展開しています。
+                    切り分ける、盛り付ける、料理を渡すなど、
+                    お子さまの興味に合わせた遊び方を考えられます。
+                    食材の種類や仕掛け、付属品は商品ごとに異なるため、
+                    セット内容を確認して選びましょう。
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-number" aria-hidden="true">POINT 03</div>
+
+                <div class="feature-heading">
+                    <span class="feature-icon" aria-hidden="true">🛡️</span>
+                    <h3 class="feature-title">
+                        対象年齢と安全基準を商品ごとに確認
+                        <span class="feature-subtitle">
+                            試験・認証の表示と使用上の注意をチェック
+                        </span>
+                    </h3>
+                </div>
+
+                <p class="body-copy">
+                    公式ストアでは、各商品の対象年齢や素材、安全基準などを確認できます。
+                    例えば「はじめてのおままごと おにぎりセット」は、
+                    対象年齢3歳以上で、ST基準適合検査合格・食品衛生法検査済と案内されています。
+                    ブランド全体を一括りにせず、購入する商品の表示を確認してください。
+                </p>
+
+                <p class="small-note">
+                    ※試験や認証の表示は、事故が起こらないことを保証するものではありません。
+                    対象年齢や取扱説明書、保護者の見守りに関する注意事項をお守りください。<br>
+                    参考：
+                    <a class="source-link" href="https://www.woodypuddy.com/c/85887/g05-1235">
+                        おにぎりセットの商品情報・安全基準
+                    </a>
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-number" aria-hidden="true">POINT 04</div>
+
+                <div class="feature-heading">
+                    <span class="feature-icon" aria-hidden="true">🌱</span>
+                    <h3 class="feature-title">
+                        木の質感を楽しめるラインナップ
+                        <span class="feature-subtitle">
+                            素材・単品販売・名入れ条件を確認
+                        </span>
+                    </h3>
+                </div>
+
+                <p class="body-copy">
+                    木の質感や食材を模したデザインを楽しめるおもちゃです。
+                    素材には天然木のほか、商品によって合板・MDF・磁石なども使用されています。
+                    買い足し用の単品や名入れ対応商品を探す場合は、
+                    現在の販売状況、対応する商品、追加料金をご確認ください。
+                </p>
+
+                <p class="small-note">
+                    ※素材・仕様・名入れの対応範囲は商品によって異なります。
+                    木製であることだけを理由に、他素材より環境負荷が小さいと比較するものではありません。
+                </p>
+            </article>
+        </section>
+
+        <!-- 比較表 -->
+        <section class="section section-white" aria-labelledby="comparison-title">
+            <div class="section-heading">
+                <span class="section-label">Comparison</span>
+                <h2 class="section-title" id="comparison-title">
+                    おままごと玩具の構造と<br>
+                    <span class="text-green">購入前の確認ポイント</span>
+                </h2>
+            </div>
+
+            <p class="table-intro" id="comparison-description">
+                接合方法の違いを、選ぶときの目安としてまとめました。
+                安全性・耐久性・遊び心地は個々の商品によって異なり、
+                この表は優劣や安全性を採点するものではありません。
+            </p>
+
+            <div
+                class="table-scroll"
+                tabindex="0"
+                role="region"
+                aria-label="おままごと玩具の比較表。狭い画面では横にスクロールできます"
+            >
+                <table class="comparison-table" aria-describedby="comparison-description">
+                    <caption class="sr-only">
+                        接合方法別のおままごと玩具の構造と購入前の確認事項
+                    </caption>
+
                     <thead>
-                        <tr class="text-center">
-                            <th class="p-2.5 bg-wood-100 text-wood-800 font-bold border border-wood-200 w-1/4">比較項目</th>
-                            <th class="p-2.5 bg-emerald-700 text-white font-extrabold border border-emerald-800 w-1/3 text-xs sm:text-sm">
-                                ウッディプッディ<br><span class="text-[10px] font-normal text-emerald-200">(埋め込み磁石)</span>
+                        <tr>
+                            <th scope="col">比較項目</th>
+                            <th scope="col" class="featured-column">
+                                リアルフラット構造の<br>対象商品
                             </th>
-                            <th class="p-2.5 bg-gray-100 text-gray-700 font-bold border border-gray-200 w-1/4">一般的な<br>面ファスナー</th>
-                            <th class="p-2.5 bg-gray-100 text-gray-700 font-bold border border-gray-200 w-1/4">磁石むき出し<br>タイプ</th>
+                            <th scope="col">
+                                面ファスナー式
+                            </th>
+                            <th scope="col">
+                                磁石が露出する<br>構造の商品
+                            </th>
                         </tr>
                     </thead>
-                    <tbody class="text-center">
+
+                    <tbody>
                         <tr>
-                            <td class="p-2.5 font-bold bg-wood-50 border border-wood-200 text-left">安全性・誤飲防止</td>
-                            <td class="p-2.5 font-extrabold bg-emerald-50 border border-emerald-200 text-emerald-700 text-base">◎<br><span class="text-[10px] font-normal">磁石露出ゼロ</span></td>
-                            <td class="p-2.5 border border-gray-200 text-gray-700">○<br><span class="text-[10px]">誤飲危険は低い</span></td>
-                            <td class="p-2.5 border border-gray-200 text-red-600 font-bold">×<br><span class="text-[10px]">外れる懸念あり</span></td>
+                            <th scope="row">接合部分</th>
+                            <td class="featured-column">
+                                木栓で覆われた磁石で接合
+                            </td>
+                            <td>
+                                面ファスナーで接合
+                            </td>
+                            <td>
+                                表面に見える磁石で接合
+                            </td>
                         </tr>
+
                         <tr>
-                            <td class="p-2.5 font-bold bg-wood-50 border border-wood-200 text-left">切り心地・爽快感</td>
-                            <td class="p-2.5 font-extrabold bg-emerald-50 border border-emerald-200 text-emerald-700 text-base">◎<br><span class="text-[10px] font-normal">サクッと快感</span></td>
-                            <td class="p-2.5 border border-gray-200 text-gray-700">△<br><span class="text-[10px]">バリバリ音が鳴る</span></td>
-                            <td class="p-2.5 border border-gray-200 text-gray-700">○<br><span class="text-[10px]">磁力でくっつく</span></td>
+                            <th scope="row">遊び心地</th>
+                            <td class="featured-column">
+                                磁石を離して切り分ける
+                            </td>
+                            <td>
+                                面ファスナーを離して切り分ける
+                            </td>
+                            <td>
+                                磁石を離して切り分ける
+                            </td>
                         </tr>
+
                         <tr>
-                            <td class="p-2.5 font-bold bg-wood-50 border border-wood-200 text-left">衛生面・ほこり</td>
-                            <td class="p-2.5 font-extrabold bg-emerald-50 border border-emerald-200 text-emerald-700 text-base">◎<br><span class="text-[10px] font-normal">サッと拭くだけ</span></td>
-                            <td class="p-2.5 border border-gray-200 text-red-600 font-bold">×<br><span class="text-[10px]">ゴミが絡まる</span></td>
-                            <td class="p-2.5 border border-gray-200 text-gray-700">△<br><span class="text-[10px]">隙間に汚れ</span></td>
+                            <th scope="row">お手入れ</th>
+                            <td class="featured-column">
+                                断面を含め、商品指定の方法を確認
+                            </td>
+                            <td>
+                                接合面を含め、商品指定の方法を確認
+                            </td>
+                            <td>
+                                磁石周辺を含め、商品指定の方法を確認
+                            </td>
                         </tr>
+
                         <tr>
-                            <td class="p-2.5 font-bold bg-wood-50 border border-wood-200 text-left">耐久性・長持ち</td>
-                            <td class="p-2.5 font-extrabold bg-emerald-50 border border-emerald-200 text-emerald-700 text-base">◎<br><span class="text-[10px] font-normal">磁力が半永久的</span></td>
-                            <td class="p-2.5 border border-gray-200 text-red-600 font-bold">×<br><span class="text-[10px]">徐々に弱まる</span></td>
-                            <td class="p-2.5 border border-gray-200 text-gray-700">○<br><span class="text-[10px]">磁力は維持</span></td>
+                            <th scope="row">使用前の確認</th>
+                            <td class="featured-column">
+                                木栓や木部の割れ・緩み・欠損
+                            </td>
+                            <td>
+                                接合部分や部品の剥がれ・破損
+                            </td>
+                            <td>
+                                磁石の固定状態や部品の破損
+                            </td>
                         </tr>
+
                         <tr>
-                            <td class="p-2.5 font-bold bg-wood-50 border border-wood-200 text-left">ギフト・高級感</td>
-                            <td class="p-2.5 font-extrabold bg-emerald-50 border border-emerald-200 text-emerald-700 text-base">◎<br><span class="text-[10px] font-normal">喜ばれる特別感</span></td>
-                            <td class="p-2.5 border border-gray-200 text-gray-700">△<br><span class="text-[10px]">庶民的</span></td>
-                            <td class="p-2.5 border border-gray-200 text-gray-700">△<br><span class="text-[10px]">海外製品多め</span></td>
+                            <th scope="row">ギフト選び</th>
+                            <td class="featured-column">
+                                対象年齢・セット内容・包装条件を確認
+                            </td>
+                            <td>
+                                対象年齢・セット内容・包装条件を確認
+                            </td>
+                            <td>
+                                対象年齢・セット内容・包装条件を確認
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+
+            <p class="table-note">
+                ※商品によって構造や仕様は異なります。購入する商品の説明を優先してください。<br>
+                ※狭い画面では表を横にスクロールできます。
+            </p>
         </section>
 
-
-        <!-- 6. 利用シーン・年齢別おすすめ＆体験イメージ -->
-        <section class="p-5 sm:p-8 space-y-6">
-            <div class="text-center">
-                <span class="text-amber-700 bg-amber-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Age & Scenes</span>
-                <h2 class="text-xl sm:text-2xl font-bold text-wood-900 mt-2">
-                    お子さまの成長に寄り添う<br><span class="text-emerald-700">年齢別おすすめ＆体験イメージ</span>
+        <!-- ギフト選び -->
+        <section class="section gift-section" aria-labelledby="gift-title">
+            <div class="section-heading">
+                <span class="section-label">Gift &amp; Scenes</span>
+                <h2 class="section-title" id="gift-title">
+                    年齢と興味に合わせて選ぶ<br>
+                    <span class="text-green">ギフト選びのヒント</span>
                 </h2>
             </div>
 
-            <!-- 年齢別カード 0〜1歳 -->
-            <div class="bg-white p-5 rounded-2xl border border-wood-200 shadow-sm flex flex-col sm:flex-row items-center gap-4">
-                <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center text-3xl shrink-0">
-                    👶
-                </div>
+            <article class="gift-card">
+                <div class="gift-icon" aria-hidden="true">👶</div>
+
                 <div>
-                    <div class="inline-block bg-amber-200 text-wood-900 text-xs font-bold px-2.5 py-0.5 rounded-md mb-1">
-                        0歳〜1歳（出産祝い・ファーストバースデー）
-                    </div>
-                    <h3 class="font-bold text-base text-wood-900">手触りと音を楽しむ木のおもちゃ・ラトル</h3>
-                    <p class="text-xs sm:text-sm text-wood-700 mt-1">
-                        握りやすく丸みのあるデザイン。舐めても安心な無塗装や安全塗料使用で、木の温もりを五感で楽しめます。
+                    <span class="gift-label">
+                        出産祝い・1歳のお祝いを検討している方へ
+                    </span>
+                    <h3 class="gift-title">
+                        今すぐ遊べるものか、将来使うものかを区別
+                    </h3>
+                    <p class="body-copy">
+                        贈る時期と、商品を使える年齢は同じとは限りません。
+                        乳児向けの贈り物は、実際の対象月齢・部品の大きさ・使用方法を確認して選びましょう。
+                        3歳以上向けのおままごとを、乳児が今すぐ遊べるものとして勧めるものではありません。
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <!-- 年齢別カード 2〜3歳 -->
-            <div class="bg-white p-5 rounded-2xl border border-wood-200 shadow-sm flex flex-col sm:flex-row items-center gap-4">
-                <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl shrink-0">
-                    🍓
-                </div>
+            <article class="gift-card">
+                <div class="gift-icon green" aria-hidden="true">🍓</div>
+
                 <div>
-                    <div class="inline-block bg-emerald-200 text-emerald-900 text-xs font-bold px-2.5 py-0.5 rounded-md mb-1">
-                        2歳〜3歳（お誕生日・初めてのおままごと）
-                    </div>
-                    <h3 class="font-bold text-base text-wood-900">「トントン！サクッ！」包丁デビューセット</h3>
-                    <p class="text-xs sm:text-sm text-wood-700 mt-1">
-                        包丁で切り分ける感覚に夢中！野菜やフルーツの名前を覚えたり、手先の器用さを育む知育にピッタリの時期です。
+                    <span class="gift-label green">
+                        対象年齢3歳くらい〜と案内される商品例
+                    </span>
+                    <h3 class="gift-title">
+                        はじめてのおままごと サラダセット 木箱入り
+                    </h3>
+                    <p class="body-copy">
+                        野菜などの食材を使ったごっこ遊びを検討する際の候補に。
+                        公式商品ページでは「オススメ：3歳くらい〜」と案内されています。
+                        購入時には、最新の対象年齢表示・セット内容・名入れ条件をご確認ください。
+                    </p>
+                    <p class="small-note">
+                        表示内容の参考：
+                        <a class="source-link" href="https://www.woodypuddy.com/c/85887/44315/g05-1211n">
+                            公式商品ページ
+                        </a>
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <!-- 年齢別カード 3〜4歳〜 -->
-            <div class="bg-white p-5 rounded-2xl border border-wood-200 shadow-sm flex flex-col sm:flex-row items-center gap-4">
-                <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center text-3xl shrink-0">
-                    🍳
-                </div>
+            <article class="gift-card">
+                <div class="gift-icon orange" aria-hidden="true">🍙</div>
+
                 <div>
-                    <div class="inline-block bg-orange-200 text-orange-900 text-xs font-bold px-2.5 py-0.5 rounded-md mb-1">
-                        3歳〜4歳〜（クリスマス・お店屋さんごっこ）
-                    </div>
-                    <h3 class="font-bold text-base text-wood-900">コンロ・お寿司・焼き魚で本格ごっこ遊び</h3>
-                    <p class="text-xs sm:text-sm text-wood-700 mt-1">
-                        「いらっしゃいませ！」「召し上がれ！」など言葉のコミュニケーションが豊かに。家族やお友達と一緒に楽しく遊べます。
+                    <span class="gift-label orange">
+                        対象年齢3歳〜の商品例
+                    </span>
+                    <h3 class="gift-title">
+                        はじめてのおままごと おにぎりセット
+                    </h3>
+                    <p class="body-copy">
+                        おにぎりをモチーフにしたごっこ遊びを楽しむ商品です。
+                        公式商品ページでは対象年齢3歳以上と案内されています。
+                        遊び方や付属品を確認し、お子さまの興味に合うかを考えて選びましょう。
+                    </p>
+                    <p class="small-note">
+                        表示内容の参考：
+                        <a class="source-link" href="https://www.woodypuddy.com/c/85887/g05-1235">
+                            公式商品ページ
+                        </a>
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <!-- 祖父母からの口コミ風カード -->
-            <div class="bg-amber-50/90 p-5 rounded-2xl border-2 border-dashed border-amber-300 relative mt-4">
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="text-xl">👵👴</span>
-                    <span class="font-bold text-sm text-wood-900">おじいちゃん・おばあちゃんからも大人気！</span>
-                </div>
-                <p class="text-xs sm:text-sm text-wood-800 italic leading-relaxed">
-                    「孫の3歳の誕生日にプレゼントしました。プラスチックのおもちゃと違って質感がとても良く、マグネットが中に入っているから安全と喜ばれました。名入れサービスも利用できて最高の記念になりました！」
+            <!-- 購入者の体験談ではなく、ギフト選びの案内 -->
+            <aside class="gift-message" aria-labelledby="grandparents-title">
+                <h3 class="gift-message-heading" id="grandparents-title">
+                    <span class="gift-message-icon" aria-hidden="true">👵👴</span>
+                    <span>祖父母から贈る、記念日のギフト選びに</span>
+                </h3>
+
+                <p class="body-copy">
+                    お孫さまの年齢や好みに合わせて選ぶ木のおもちゃ。
+                    名入れに対応する商品なら、名前を添えた贈り物も検討できます。
+                    すでに持っている玩具との重複がないかをご家族に確認し、
+                    対象商品・料金・発送までの日数を公式ストアでチェックしましょう。
                 </p>
-            </div>
+            </aside>
         </section>
 
-
-        <!-- 7. 中盤 CTAセクション -->
-        <section class="p-6 bg-gradient-to-br from-emerald-800 to-emerald-900 text-white text-center my-4">
-            <h2 class="text-xl sm:text-2xl font-extrabold mb-2">
-                お子さまの笑顔と成長をつくる<br>【ウッディプッディ】を始めませんか？
+        <!-- 中盤CTA -->
+        <section class="middle-cta" aria-labelledby="middle-cta-title">
+            <h2 id="middle-cta-title">
+                お子さまの「やってみたい」に合う<br>
+                木のおもちゃを探してみませんか？
             </h2>
-            <p class="text-xs sm:text-sm text-emerald-100 mb-5">
-                人気の限定セットや名入れオプションは公式オンラインショップで確認できます。
+
+            <p class="intro">
+                ラインナップやセット内容、名入れ対応商品は<br>
+                公式オンラインショップでご確認いただけます。
             </p>
 
-            <div class="animate-pulse-subtle max-w-md mx-auto">
-                <p class="text-xs font-bold text-amber-300 mb-1">＼ 出産祝い・誕生日・クリスマスに人気 ／</p>
+            <div class="cta-block animate-pulse-subtle">
+                <p class="cta-microcopy">
+                    ＼ お誕生日・クリスマスなどのギフト選びに ／
+                </p>
+
                 <div class="cta-btn-wrapper">
-                    <!-- A8.net テキスト広告タグ（完全改変なし） -->
+                    <!-- A8.net テキスト広告タグ：原文維持 -->
                     <a href="https://px.a8.net/svt/ejp?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" rel="nofollow">木のおままごと ウッディプッディ</a>
                     <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" alt="">
                 </div>
             </div>
         </section>
 
-
-        <!-- 8. よくある質問 (FAQ アコーディオン) -->
-        <section class="p-5 sm:p-8 bg-white border-y border-wood-200">
-            <div class="text-center mb-6">
-                <span class="text-amber-700 bg-amber-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">FAQ</span>
-                <h2 class="text-xl sm:text-2xl font-bold text-wood-900 mt-2">
-                    よくあるご質問
+        <!-- FAQ -->
+        <section class="section faq-section" aria-labelledby="faq-title">
+            <div class="section-heading">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title" id="faq-title">
+                    購入前によくあるご質問
                 </h2>
             </div>
 
-            <div class="space-y-3 max-w-lg mx-auto" id="faq-accordion">
-                <!-- Q1 -->
-                <div class="border border-wood-200 rounded-xl overflow-hidden bg-wood-50/50">
-                    <button class="faq-toggle w-full p-4 text-left font-bold text-xs sm:text-sm text-wood-900 flex justify-between items-center focus:outline-none">
-                        <span class="flex items-center gap-2">
-                            <span class="text-emerald-700 font-black">Q1.</span>
-                            何歳頃から遊ぶことができますか？
-                        </span>
-                        <span class="transform transition-transform text-wood-600 icon">+</span>
-                    </button>
-                    <div class="faq-content hidden p-4 text-xs sm:text-sm text-wood-800 bg-white border-t border-wood-100">
-                        対象年齢はアイテムによって異なりますが、0歳向けのラトル・木のおもちゃから、1.5歳〜のおままごと初心者セット、3歳〜のごっこ遊びセットまで幅広く展開しています。各商品の対象年齢は公式ストアの商品詳細でご覧いただけます。
-                    </div>
-                </div>
+            <div class="faq-list">
 
-                <!-- Q2 -->
-                <div class="border border-wood-200 rounded-xl overflow-hidden bg-wood-50/50">
-                    <button class="faq-toggle w-full p-4 text-left font-bold text-xs sm:text-sm text-wood-900 flex justify-between items-center focus:outline-none">
-                        <span class="flex items-center gap-2">
-                            <span class="text-emerald-700 font-black">Q2.</span>
-                            マグネットが外れて誤飲する心配はありませんか？
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span class="faq-question-label">
+                            <span class="faq-number" aria-hidden="true">Q1.</span>
+                            <span>何歳頃から遊ぶことができますか？</span>
                         </span>
-                        <span class="transform transition-transform text-wood-600 icon">+</span>
-                    </button>
-                    <div class="faq-content hidden p-4 text-xs sm:text-sm text-wood-800 bg-white border-t border-wood-100">
-                        ウッディプッディのおままごとは、木の中にマグネットを埋め込んだ独自構造（リアルフラット構造）を採用しています。磁石が外側に露出しないため誤飲の心配がなく、小さな子でも安全に遊べる設計になっています。
-                    </div>
-                </div>
+                    </summary>
 
-                <!-- Q3 -->
-                <div class="border border-wood-200 rounded-xl overflow-hidden bg-wood-50/50">
-                    <button class="faq-toggle w-full p-4 text-left font-bold text-xs sm:text-sm text-wood-900 flex justify-between items-center focus:outline-none">
-                        <span class="flex items-center gap-2">
-                            <span class="text-emerald-700 font-black">Q3.</span>
-                            お手入れ方法や消毒の仕方はどうすればいいですか？
-                        </span>
-                        <span class="transform transition-transform text-wood-600 icon">+</span>
-                    </button>
-                    <div class="faq-content hidden p-4 text-xs sm:text-sm text-wood-800 bg-white border-t border-wood-100">
-                        木製のおもちゃは湿気に弱いため、水洗いは避け、固く絞った濡れタオル等で汚れをサッと拭き取った後、風通しの良い日陰で乾燥させてください。断面がフラットなため汚れも拭き取りやすくなっています。
+                    <div class="faq-answer">
+                        対象年齢は商品によって異なります。
+                        このページで紹介しているおままごとの商品例には、
+                        3歳以上、または3歳くらいからと案内されているものがあります。
+                        ブランド名だけで判断せず、購入する商品の対象年齢と使用上の注意をご確認ください。
+                        出産祝いとして将来使う玩具を贈る場合も、
+                        対象年齢になるまで適切に保管していただく必要があります。
                     </div>
-                </div>
+                </details>
 
-                <!-- Q4 -->
-                <div class="border border-wood-200 rounded-xl overflow-hidden bg-wood-50/50">
-                    <button class="faq-toggle w-full p-4 text-left font-bold text-xs sm:text-sm text-wood-900 flex justify-between items-center focus:outline-none">
-                        <span class="flex items-center gap-2">
-                            <span class="text-emerald-700 font-black">Q4.</span>
-                            ギフトラッピングや名入れサービスは対応していますか？
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span class="faq-question-label">
+                            <span class="faq-number" aria-hidden="true">Q2.</span>
+                            <span>マグネットの構造と使用時の注意点は？</span>
                         </span>
-                        <span class="transform transition-transform text-wood-600 icon">+</span>
-                    </button>
-                    <div class="faq-content hidden p-4 text-xs sm:text-sm text-wood-800 bg-white border-t border-wood-100">
-                        はい、公式オンラインショップではオリジナルギフトラッピングやのし対応、一部対象商品への名入れ彫刻サービスを行っております。出産祝いやお誕生日の特別なプレゼントに大変喜ばれています。
-                    </div>
-                </div>
+                    </summary>
 
-                <!-- Q5 -->
-                <div class="border border-wood-200 rounded-xl overflow-hidden bg-wood-50/50">
-                    <button class="faq-toggle w-full p-4 text-left font-bold text-xs sm:text-sm text-wood-900 flex justify-between items-center focus:outline-none">
-                        <span class="flex items-center gap-2">
-                            <span class="text-emerald-700 font-black">Q5.</span>
-                            後から単品で食材を買い足すことはできますか？
-                        </span>
-                        <span class="transform transition-transform text-wood-600 icon">+</span>
-                    </button>
-                    <div class="faq-content hidden p-4 text-xs sm:text-sm text-wood-800 bg-white border-t border-wood-100">
-                        もちろん可能です！セット商品だけでなく、野菜やフルーツ、調理器具などを1点から単品で購入できます。お子様の好みや成長に合わせて少しずつコレクションを増やしていく楽しみもあります。
+                    <div class="faq-answer">
+                        リアルフラット構造の商品は、磁石を木栓で覆い、
+                        表面に磁石が露出しないようにした設計です。
+                        ただし、破損や誤飲の危険性がなくなるわけではありません。
+                        遊ぶ前に部品の状態を確認し、破損・変形・緩みがある場合は使用を中止してください。
+                        磁石が外れた場合は必ず回収し、お子さまの手の届かない場所に保管してください。
+                        詳細は商品付属の注意書きとメーカーの案内をご確認ください。
                     </div>
-                </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span class="faq-question-label">
+                            <span class="faq-number" aria-hidden="true">Q3.</span>
+                            <span>お手入れや消毒はどうすればよいですか？</span>
+                        </span>
+                    </summary>
+
+                    <div class="faq-answer">
+                        素材や塗装によって適切な方法が異なるため、
+                        商品付属の取扱説明書やメーカーの案内を優先してください。
+                        水洗い・つけ置き・アルコール消毒・煮沸などを
+                        自己判断で行わず、対応可否が分からない場合は購入先へ確認しましょう。
+                        破損や塗装の異常が見つかった場合は、使用を中止してください。
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span class="faq-question-label">
+                            <span class="faq-number" aria-hidden="true">Q4.</span>
+                            <span>ギフト包装や名入れは利用できますか？</span>
+                        </span>
+                    </summary>
+
+                    <div class="faq-answer">
+                        包装や名入れの対応は、商品や注文条件によって異なります。
+                        購入する商品ページと注文画面で、
+                        対応可否・料金・入力できる文字・納期をご確認ください。
+                        贈る日が決まっている場合は、通常商品と名入れ商品の発送予定を分けて確認すると安心です。
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span class="faq-question-label">
+                            <span class="faq-number" aria-hidden="true">Q5.</span>
+                            <span>食材などを後から買い足せますか？</span>
+                        </span>
+                    </summary>
+
+                    <div class="faq-answer">
+                        単品販売されている商品もありますが、
+                        品目や在庫、仕様は変更される場合があります。
+                        お手持ちのセットへの追加を検討する際は、
+                        商品の大きさ・構造・対象年齢・付属品を公式ストアでご確認ください。
+                    </div>
+                </details>
+
             </div>
         </section>
 
-
-        <!-- 9. クロージング CTA & バナーセクション -->
-        <section class="p-5 sm:p-8 bg-gradient-to-b from-amber-100/60 to-wood-100 text-center relative">
-            <h2 class="text-xl sm:text-2xl font-extrabold text-wood-900 mb-2">
-                木ならではの温もりと感動を、<br><span class="text-emerald-700">たいせつなお子さま・お孫さまへ</span>
+        <!-- クロージング -->
+        <section class="section closing" aria-labelledby="closing-title">
+            <h2 id="closing-title">
+                木の質感と、ごっこ遊びの楽しさを<br>
+                <span class="text-green">たいせつなお子さま・お孫さまへ</span>
             </h2>
-            <p class="text-xs sm:text-sm text-wood-800 mb-6 max-w-md mx-auto">
-                ずっと長く安全に使えるから、世界にひとつだけの特別な思い出に。<br>
-                公式ストアでラインナップと特典をチェックしてください。
+
+            <p class="closing-intro">
+                年齢や興味に合ったおもちゃを選ぶために、<br>
+                公式ストアで対象年齢・セット内容・使用上の注意をチェックしてください。
             </p>
 
-            <!-- A8.net バナー広告配置エリア -->
-            <div class="a8-banner-container max-w-xs">
-                <!-- A8.net バナー広告タグ（完全改変なし） -->
+            <div class="a8-banner-container banner-narrow">
+                <!-- A8.net バナー広告タグ：原文維持 -->
                 <a href="https://px.a8.net/svt/ejp?a8mat=4BGR8Z+E2NWKY+5DZ2+5YZ75" rel="nofollow">
                 <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=261122291851&wid=001&eno=01&mid=s00000025139001003000&mc=1"></a>
                 <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4BGR8Z+E2NWKY+5DZ2+5YZ75" alt="">
             </div>
 
-            <!-- クロージング CTA -->
-            <div class="mt-6 animate-pulse-subtle max-w-md mx-auto">
-                <p class="text-xs font-bold text-emerald-800 mb-1.5">＼ 公式ストアなら安心の品質保障＆ギフト対応 ／</p>
-                <div class="cta-btn-wrapper">
-                    <!-- A8.net テキスト広告タグ（完全改変なし） -->
-                    <a href="https://px.a8.net/svt/ejp?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" rel="nofollow">木のおままごと ウッディプッディ</a>
-                    <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" alt="">
+            <div class="cta-block">
+                <div class="animate-pulse-subtle">
+                    <p class="cta-microcopy">
+                        ＼ ラインナップ・包装・名入れ条件を確認 ／
+                    </p>
+
+                    <div class="cta-btn-wrapper">
+                        <!-- A8.net テキスト広告タグ：原文維持 -->
+                        <a href="https://px.a8.net/svt/ejp?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" rel="nofollow">木のおままごと ウッディプッディ</a>
+                        <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" alt="">
+                    </div>
                 </div>
+
+                <p class="cta-note">
+                    ※価格・在庫・キャンペーン・サービス内容は変更される場合があります。
+                    最新情報は公式ストアでご確認ください。
+                </p>
             </div>
         </section>
 
         <!-- フッター -->
-        <footer class="bg-wood-900 text-wood-200 text-xs p-6 text-center space-y-3">
-            <div class="font-bold text-sm text-white">
+        <footer class="site-footer">
+            <div class="footer-title">
                 暮らしと家族の便利アイテム＆サービス案内所
             </div>
-            <p class="text-[11px] leading-relaxed text-wood-300 max-w-lg mx-auto">
-                当サイトは「ウッディプッディ」の正規アフィリエイトパートナーとして商品情報および紹介を行っております。ご注文・お届け・お支払い・返品等に関するお問い合わせは、移動先の公式サイト案内をご確認ください。
+
+            <p class="footer-note">
+                当サイトは、アフィリエイト広告を利用して
+                ウッディプッディの商品を紹介する独立したサイトです。
+                販売元の公式サイトではありません。<br>
+                ご注文・お届け・お支払い・返品・製品の安全性に関するお問い合わせは、
+                リンク先の公式ストアの窓口をご利用ください。
             </p>
-            <div class="pt-2 border-t border-wood-800 text-[10px] text-wood-400">
+
+            <details class="footer-policy">
+                <summary>運営者情報・広告について・免責事項</summary>
+
+                <div class="footer-policy-body">
+                    <p>
+                        <strong>【サイト運営】</strong><br>
+                        暮らしと家族の便利アイテム＆サービス案内所<br>
+                        当サイトは商品情報の紹介を行っており、
+                        商品の販売、注文の受付、発送、返品対応は行っていません。
+                    </p>
+
+                    <p>
+                        <strong>【アフィリエイト広告について】</strong><br>
+                        当サイトはA8.netのアフィリエイトプログラムを利用しています。
+                        掲載した広告リンクを経由して商品購入などが行われた場合、
+                        当サイト運営者が報酬を受け取ることがあります。
+                    </p>
+
+                    <p>
+                        <strong>【広告の計測・Cookie等について】</strong><br>
+                        広告の配信や成果計測に伴い、
+                        広告サービス提供事業者等がCookieなどを利用する場合があります。
+                        情報の取り扱いは、各事業者のプライバシーポリシー等をご確認ください。<br>
+                        <a
+                            class="source-link"
+                            href="https://www.fancs.com/privacy"
+                        >株式会社ファンコミュニケーションズのプライバシーポリシー</a>
+                    </p>
+
+                    <p>
+                        <strong>【外部サイトでの情報入力について】</strong><br>
+                        購入手続き等で入力する氏名・住所・連絡先・決済情報などは、
+                        移動先のサイトが、それぞれの方針に基づいて取り扱います。
+                        入力前に、移動先の運営者情報と個人情報の取り扱いをご確認ください。
+                    </p>
+
+                    <p>
+                        <strong>【掲載情報・免責事項】</strong><br>
+                        情報の正確性には配慮していますが、
+                        価格・在庫・仕様・対象年齢・付属品・サービス内容等は変更される場合があります。
+                        購入前に、販売元の最新情報、
+                        利用規約、返品条件、特定商取引法に基づく表記をご確認ください。
+                        契約および商品販売の主体はリンク先の販売事業者です。
+                        本記載は、当サイト運営者が法令上負う責任を一律に免除するものではありません。
+                    </p>
+
+                    <p>
+                        <strong>【安全に使用するために】</strong><br>
+                        商品の対象年齢、取扱説明書、警告・注意表示をお守りください。
+                        使用前に部品の状態を確認し、
+                        破損・変形・欠損・緩みなどがある場合は使用を中止してください。
+                        このページの説明は、個々の商品の取扱説明書やメーカーの注意事項に代わるものではありません。
+                    </p>
+                </div>
+            </details>
+
+            <div class="footer-copyright">
                 &copy; 暮らしと家族の便利アイテム＆サービス案内所 All Rights Reserved.
             </div>
         </footer>
 
     </main>
 
-
-    <!-- 10. スマホ向け追従フローティングCTAバー -->
-    <div id="floating-cta" class="fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-white/95 backdrop-blur-md border-t border-amber-200 shadow-2xl transition-transform duration-300 transform translate-y-0">
-        <div class="max-w-[760px] mx-auto relative flex items-center justify-between gap-2">
-            <!-- 閉じるボタン -->
-            <button id="close-cta" class="absolute -top-7 right-2 bg-wood-800 text-white text-[10px] px-2 py-0.5 rounded-t-md opacity-80 hover:opacity-100 flex items-center gap-1">
-                <span>✕</span> 閉じる
+    <!-- 追従CTA -->
+    <aside
+        id="floating-cta"
+        class="floating-cta"
+        aria-label="公式ストアへの広告リンク"
+    >
+        <div class="floating-inner">
+            <button
+                id="close-cta"
+                class="close-cta"
+                type="button"
+                aria-label="追従する広告案内を閉じる"
+            >
+                <span aria-hidden="true">✕</span>
+                <span>閉じる</span>
             </button>
 
-            <div class="w-full">
-                <div class="text-[10px] font-bold text-emerald-800 text-center mb-0.5 flex items-center justify-center gap-1">
-                    <span>🎁</span> 0〜4歳のプレゼントに！公式通販はこちら
+            <div class="floating-content">
+                <div class="floating-caption">
+                    <span aria-hidden="true">🎁</span>
+                    <span>木のおもちゃのギフト選びに｜公式通販はこちら</span>
                 </div>
+
                 <div class="cta-btn-wrapper">
-                    <!-- A8.net テキスト広告タグ（完全改変なし） -->
+                    <!-- A8.net テキスト広告タグ：原文維持 -->
                     <a href="https://px.a8.net/svt/ejp?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" rel="nofollow">木のおままごと ウッディプッディ</a>
                     <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BGR8Z+E2NWKY+5DZ2+5YJRM" alt="">
                 </div>
             </div>
         </div>
-    </div>
+    </aside>
 
-
-    <!-- アコーディオン＆追従バーJS -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // FAQ アコーディオン機能
-            const faqToggles = document.querySelectorAll('.faq-toggle');
-            faqToggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    const icon = this.querySelector('.icon');
-                    
-                    if (content.classList.contains('hidden')) {
-                        content.classList.remove('hidden');
-                        icon.textContent = '−';
-                        icon.style.transform = 'rotate(180deg)';
-                    } else {
-                        content.classList.add('hidden');
-                        icon.textContent = '+';
-                        icon.style.transform = 'rotate(0deg)';
-                    }
-                });
+        (function () {
+            const closeButton = document.getElementById('close-cta');
+            const floatingCta = document.getElementById('floating-cta');
+            const pageMain = document.querySelector('.page-main');
+
+            if (!closeButton || !floatingCta || !pageMain) {
+                return;
+            }
+
+            const initialPadding = parseFloat(
+                window.getComputedStyle(pageMain).paddingBottom
+            ) || 0;
+
+            function updateBottomSpacing() {
+                if (floatingCta.hidden) {
+                    pageMain.style.paddingBottom = initialPadding + 'px';
+                    return;
+                }
+
+                const ctaHeight = Math.ceil(
+                    floatingCta.getBoundingClientRect().height
+                );
+
+                pageMain.style.paddingBottom =
+                    Math.max(initialPadding, ctaHeight + 40) + 'px';
+            }
+
+            closeButton.addEventListener('click', function () {
+                floatingCta.hidden = true;
+                updateBottomSpacing();
             });
 
-            // 追従CTAバーの閉じるボタン機能
-            const closeBtn = document.getElementById('close-cta');
-            const floatingCta = document.getElementById('floating-cta');
-            if (closeBtn && floatingCta) {
-                closeBtn.addEventListener('click', function() {
-                    floatingCta.style.display = 'none';
-                });
+            updateBottomSpacing();
+
+            window.addEventListener('resize', updateBottomSpacing);
+            window.addEventListener('load', updateBottomSpacing);
+
+            if ('ResizeObserver' in window) {
+                const observer = new ResizeObserver(updateBottomSpacing);
+                observer.observe(floatingCta);
             }
-        });
+        })();
     </script>
+
 </body>
 </html>
